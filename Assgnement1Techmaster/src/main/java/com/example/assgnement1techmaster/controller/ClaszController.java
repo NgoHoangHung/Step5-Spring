@@ -66,7 +66,6 @@ public class ClaszController {
         Student student = studentRepository.findById(id).orElse(null);
         if (student != null) {
             studentRepository.deleteById(id);
-            System.out.println();
             return ResponseEntity.ok("đã xóa thành công");
         }
         return ResponseEntity.notFound().build();
