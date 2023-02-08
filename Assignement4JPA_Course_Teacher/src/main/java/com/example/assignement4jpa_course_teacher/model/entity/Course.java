@@ -5,7 +5,6 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.Date;
 import java.util.Set;
 
 @Entity
@@ -25,6 +24,14 @@ public class Course {
     @JsonBackReference
     @ManyToMany
     @JoinTable(name = "course_student", joinColumns = @JoinColumn(name = "course_id"),
-            inverseJoinColumns = @JoinColumn(name = "teacher_id"))
+            inverseJoinColumns = @JoinColumn(name = "student_id"))
     private Set<Student> students;
+
+    @JsonBackReference
+    @ManyToMany
+    @JoinTable(name = "course_teacher", joinColumns = @JoinColumn(name = "course_id"),
+            inverseJoinColumns = @JoinColumn(name = "teacher_id"))
+    private Set<Teacher> teachers;
+
+
 }

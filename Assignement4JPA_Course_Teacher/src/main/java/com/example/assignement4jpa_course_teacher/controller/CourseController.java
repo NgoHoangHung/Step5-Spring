@@ -53,7 +53,7 @@ public class CourseController {
             courseRepository.save(course);
             return ResponseEntity.ok("Đã thêm thành công");
         }
-        return ResponseEntity.ok("tài khoản đã tồn tại");
+        return ResponseEntity.ok("Thêm thất bại. Khóa học đã tồn tại");
     }
 
     @PutMapping("/updateCourse/{id}")
