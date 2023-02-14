@@ -20,13 +20,13 @@ public class ClaszController {
     private StudentRepository studentRepository;
 
     @RequestMapping(method = RequestMethod.GET, value = "/clasz/getstudentDTO")
-    public ResponseEntity<List<StudentDTO>> getAllStudentDTO() {
+    public List<StudentDTO> getAllStudentDTO() {
         ModelMapper mapper = new ModelMapper();
         List<Student> students = studentRepository.findAll();
         List<StudentDTO> studentDTOS = students.stream()
                 .map(student -> mapper.map(student, StudentDTO.class))
                 .collect(Collectors.toList());
-        return ResponseEntity.ok(studentDTOS);
+        return studentDTOS;
     }
 
     @RequestMapping(method = RequestMethod.GET, value = "/clasz/getstudent")
@@ -48,15 +48,16 @@ public class ClaszController {
     }
 
     @RequestMapping(method = RequestMethod.PUT, value = "/clasz/edit/{id}")
-    public ResponseEntity<Student> updateStudent(@PathVariable int id,
+    public Student updateStudent(@PathVariable int id,
                                                  @RequestBody StudentDTO studentInput) {
         Student student = studentRepository.findById(id).orElse(null);
         if (student != null) {
             student.setNameStudent(studentInput.getNameStudent());
             student.setAge(studentInput.getAge());
             student.setLevel(studentInput.getLevel());
+            student.setClasz(studentInput.getClasz());
             studentRepository.save(student);
-            return ResponseEntity.ok(student);
+            return student;
         }
         return null;
     }

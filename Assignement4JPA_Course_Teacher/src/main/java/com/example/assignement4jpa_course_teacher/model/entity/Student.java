@@ -23,11 +23,11 @@ public class Student {
     private String email;
     private String address;
     private String avartar;
-    @JsonManagedReference
+//    @JsonManagedReference
     @ManyToMany(mappedBy = "students")
     private Set<Course> courses;
 
-    @JsonManagedReference
+//    @JsonManagedReference
     @ManyToMany(mappedBy = "students")
     private Set<Teacher> teachers;
 

@@ -16,19 +16,19 @@ public class Student {
     private String nameStudent;
     private Integer age;
     private String level;
-    @JsonManagedReference
+//    @JsonManagedReference
     @ManyToOne
     @JoinColumn(name = "Clasz_id")
     private Clasz clasz;
 
-//    public Student() {
-//    }
-//
-//    public Student(String nameStudent, Integer age, String level, Clasz clasz) {
-//        this.nameStudent = nameStudent;
-//        this.age = age;
-//        this.level = level;
-//        this.clasz = clasz;
-//    }
+    public Student() {
+    }
+
+    public Student(String nameStudent, Integer age, String level, Clasz clasz) {
+        this.nameStudent = nameStudent;
+        this.age = age;
+        this.level = level;
+        this.clasz = clasz;
+    }
 
 }

@@ -44,7 +44,7 @@ public class TeacherController {
         for (Teacher teacher : teachers) {
             if (input.getEmail().equalsIgnoreCase(teacher.getEmail())) {
                 flagCheck = true;
-                break;
+                return ResponseEntity.ok("Thêm thất bại. Tài khoản đã tồn tại");
             }
         }
         if (!flagCheck) {
