@@ -7,5 +7,4 @@ import lombok.Data;
 public class WalletDTO {
     private Integer id;
     private String accountNumber;
-    private String bank;
 }

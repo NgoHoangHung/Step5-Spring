@@ -1,8 +1,12 @@
 package com.example.assignment4jpa_shopmanage;
 
 import com.example.assignment4jpa_shopmanage.model.entity.Customer;
+import com.example.assignment4jpa_shopmanage.model.entity.Product;
+import com.example.assignment4jpa_shopmanage.model.entity.Shop;
 import com.example.assignment4jpa_shopmanage.model.entity.Wallet;
 import com.example.assignment4jpa_shopmanage.repository.CustomerRepository;
+import com.example.assignment4jpa_shopmanage.repository.ProductRepository;
+import com.example.assignment4jpa_shopmanage.repository.ShopRepository;
 import com.example.assignment4jpa_shopmanage.repository.WalletRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -23,19 +27,42 @@ public class Assignment4JpaShopManageApplication implements CommandLineRunner {
     private CustomerRepository customerRepository;
     @Autowired
     private WalletRepository walletRepository;
+    @Autowired
+    private ProductRepository productRepository;
+    @Autowired
+    private ShopRepository shopRepository;
 
     @Override
     public void run(String... args) throws Exception {
-//        Wallet wallet1 = new Wallet("a112", "Viettinbank", 500);
-//        Wallet wallet2 = new Wallet("a113", "techcombak", 900);
-//        Wallet wallet3 = new Wallet("a114", "agribank", 800);
-//        Wallet wallet4 = new Wallet("a115", "BIDV", 1000);
-//        walletRepository.saveAll(Arrays.asList(wallet1, wallet2, wallet3, wallet4));
+//        Wallet wallet1 = new Wallet("c112", 500);
+//        Wallet wallet2 = new Wallet("c113", 900);
+//        Wallet wallet3 = new Wallet("c114", 800);
+//        Wallet wallet4 = new Wallet("c115", 1000);
+//        Wallet shopwallet5 = new Wallet("s111", 1000);
+//        Wallet shopwallet6 = new Wallet("s115", 1000);
+//        walletRepository.saveAll(Arrays.asList(wallet1, wallet2, wallet3, wallet4, shopwallet5, shopwallet6));
 //
 //        Customer customer1 = new Customer("Hungnh", "032 1234567", "Long Bien", wallet1);
-//        Customer customer2 = new Customer("ThaiPQ", "032 1234567", "Long Bien", wallet3);
-//        Customer customer3 = new Customer("Tiendq", "032 1234567", "Long Bien", wallet4);
-//        customerRepository.saveAll(Arrays.asList(customer1, customer2, customer3));
-
+//        Customer customer2 = new Customer("ThaiPQ", "032 1111111", "To Huu", wallet2);
+//        Customer customer3 = new Customer("Tiendq", "032 2222222", "Thanh Tri", wallet3);
+//        Customer customer4 = new Customer("TrungNA", "032 3333333", "Hoang mai", wallet4);
+//        customerRepository.saveAll(Arrays.asList(customer1, customer2, customer3, customer4));
+////        (String nameProduct, int quantity, double price, String description)
+//        Product product1 = new Product("but bi", 1000, 5000, "But bi thien long");
+//        Product product2 = new Product("but chi", 2000, 5000, "But chi thien long");
+//        Product product3 = new Product("giay A4", 1000, 65000, "giay in ");
+//        Product product4 = new Product("tay erase", 1000, 5000, "tay thien long");
+//        Product product5 = new Product("thước kẻ", 1000, 5000, "best");
+//        Product product6 = new Product("bu bi red", 1000, 5000, "ben nghe");
+//        Product product7 = new Product("but bi xanh", 1000, 5000, "Ben nghe");
+//        Product product8 = new Product("but bi den", 1000, 5000, "But bi thien long");
+//        Product product9 = new Product("but bi den", 1000, 5000, "Ben nghe");
+//        Product product10 = new Product("vo o li", 1000, 5000, "vo oli ben nghe");
+//        Product product11 = new Product("vo oli", 1000, 5000, "vo oli thien long");
+//        productRepository.saveAll(Arrays.asList(product1, product2, product3, product4, product5, product6, product7, product8, product9, product10, product11));
+////        Shop(String nameShop, String phone, Set<Product> products, Wallet wallet)
+//        Shop shop1 = new Shop("thien long", "024 000111", Set.of(product1, product2, product3, product4, product5, product8, product11), shopwallet5);
+//        Shop shop2 = new Shop("ben nghe", "024 111222", Set.of(product6, product7, product9, product10), shopwallet6);
+//        shopRepository.saveAll(Arrays.asList(shop1, shop2));
     }
 }

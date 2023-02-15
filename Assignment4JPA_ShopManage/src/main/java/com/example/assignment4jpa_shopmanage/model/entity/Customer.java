@@ -1,5 +1,6 @@
 package com.example.assignment4jpa_shopmanage.model.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -13,9 +14,8 @@ import java.util.Set;
 @Setter
 public class Customer {
     @Id
-    @GeneratedValue(generator = "uuid")
-    @GenericGenerator(name = "uuid" , strategy = "uuid2")
-    private String id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
     private String name;
     private String phone;
 
@@ -36,6 +36,7 @@ public class Customer {
     @JoinColumn(name = "wallet_id")
     private Wallet wallet;
 
-    @OneToMany
+    @JsonBackReference
+    @OneToMany(mappedBy = "customer")
     private Set<Order> orders;
 }

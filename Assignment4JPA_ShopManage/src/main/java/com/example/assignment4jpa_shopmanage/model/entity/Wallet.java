@@ -1,6 +1,5 @@
 package com.example.assignment4jpa_shopmanage.model.entity;
 
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -12,22 +11,20 @@ import org.hibernate.annotations.GenericGenerator;
 @Getter
 public class Wallet {
     @Id
-    @GeneratedValue(generator ="uuid")
-    @GenericGenerator(name ="uuid", strategy = "uuid2")
-    private String id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
     private String accountNumber;
-    private Bank bank;
 
-    private double balane;
+    private double balance;
 
     public Wallet() {
     }
 
-    public Wallet(String accountNumber, Bank bank, double balane) {
+    public Wallet(String accountNumber, double balance) {
         this.accountNumber = accountNumber;
-        this.bank = bank;
-        this.balane = balane;
+        this.balance = balance;
     }
 
 
 }
+
