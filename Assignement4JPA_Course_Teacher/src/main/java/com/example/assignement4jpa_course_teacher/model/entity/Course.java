@@ -23,7 +23,8 @@ public class Course {
     private String creatAt;
     @JsonBackReference
     @ManyToMany
-    @JoinTable(name = "course_student", joinColumns = @JoinColumn(name = "course_id"),
+    @JoinTable(name = "course_student",
+            joinColumns = @JoinColumn(name = "course_id"),
             inverseJoinColumns = @JoinColumn(name = "student_id"))
     private Set<Student> students;
 

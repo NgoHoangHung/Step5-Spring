@@ -27,11 +27,9 @@ public class Shop {
     @JoinColumn(name = "wallet_id")
     private Wallet wallet;
 
-    public Shop(String nameShop, String phone, Set<Product> products, Wallet wallet) {
+    public Shop(String nameShop, String phone) {
         this.nameShop = nameShop;
         this.phone = phone;
-        this.products = products;
-        this.wallet = wallet;
     }
 
     public Shop() {

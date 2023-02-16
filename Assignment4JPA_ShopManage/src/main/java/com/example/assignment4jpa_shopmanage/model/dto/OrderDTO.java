@@ -12,7 +12,7 @@ import lombok.Data;
 import java.util.List;
 @Data
 public class OrderDTO {
-    private int order_id;
+//    private int order_id;
     private List<ProductDTO> productList;
     private CustomerDTO customerDTO;
     private String status;

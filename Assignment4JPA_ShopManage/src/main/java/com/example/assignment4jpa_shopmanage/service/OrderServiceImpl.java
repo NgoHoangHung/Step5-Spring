@@ -15,8 +15,8 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Component
 public class OrderServiceImpl implements OrderService {
@@ -41,14 +41,27 @@ public class OrderServiceImpl implements OrderService {
 //            productRepository.save(repo);
 //            product.add(repo);
 //        }
-        List<Product> product = dto.getProductList().stream()
-                .map(productDTO -> mapper.map(productDTO, Product.class))
-                .collect(Collectors.toList());
-        for (Product p : product) {
-            Product repo = productRepository.findById(p.getId()).get();
-            repo.setQuantity(repo.getQuantity() - p.getQuantity());
-            productRepository.save(repo);
+        List<Product> product = new ArrayList<>();
+        for (ProductDTO productDTO : dto.getProductList()) {
+            Product tmp = new Product();
+            Product tmpRepo = productRepository
+                    .findById(productDTO.getProduct_id()).get();
+            tmpRepo.setQuantity(tmpRepo.getQuantity() - productDTO.getQuantity());
+
+            tmp.setId(tmpRepo.getId());
+            tmp.setQuantity(productDTO.getQuantity());
+            tmp.setPrice(tmpRepo.getPrice());
+            productRepository.save(tmpRepo);
+            product.add(tmp);
         }
+//        List<Product> product = dto.getProductList().stream()
+//                .map(productDTO -> mapper.map(productDTO, Product.class))
+//                .collect(Collectors.toList());
+//        for (Product p : product) {
+//            Product repo = productRepository.findById(p.getId()).get();
+//            repo.setQuantity(repo.getQuantity() - p.getQuantity());
+//            productRepository.save(repo);
+//        }
         order.setProductList(product);
 
         //người mua
@@ -70,17 +83,17 @@ public class OrderServiceImpl implements OrderService {
             order.setCustomer(customerNew);
         }
         //trạng thái đơn hàng và giá
-        order.setTotalPrice(totalPrice(dto.getProductList()));
+        order.setTotalPrice(totalPrice(product));
         order.setStatus("Chưa thanh toán");
 
         orderRepository.save(order);
         return "Thêm đơn hàng thành công";
     }
 
-    private double totalPrice(List<ProductDTO> dto) {
+    private double totalPrice(List<Product> products) {
         double price = 0;
-        for (ProductDTO productDTO : dto) {
-            price += productDTO.getPrice() * productDTO.getQuantity();
+        for (Product product : products) {
+            price += product.getPrice() * product.getQuantity();
         }
         return price;
     }
