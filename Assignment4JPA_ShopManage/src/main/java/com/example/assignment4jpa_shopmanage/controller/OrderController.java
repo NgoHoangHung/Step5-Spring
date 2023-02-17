@@ -1,7 +1,6 @@
 package com.example.assignment4jpa_shopmanage.controller;
 
 import com.example.assignment4jpa_shopmanage.model.dto.OrderDTO;
-import com.example.assignment4jpa_shopmanage.model.entity.Order;
 import com.example.assignment4jpa_shopmanage.repository.OrderRepository;
 import com.example.assignment4jpa_shopmanage.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,12 +14,10 @@ import java.util.List;
 public class OrderController {
     @Autowired
     private OrderService orderService;
-    @Autowired
-    private OrderRepository orderRepository;
 
     @GetMapping
-    public ResponseEntity<List<Order>> getAll() {
-        return ResponseEntity.ok(orderRepository.findAll());
+    public ResponseEntity<List<OrderDTO>> getAllOrder() {
+        return ResponseEntity.ok(orderService.getAllOrder());
     }
 
     @PostMapping("")

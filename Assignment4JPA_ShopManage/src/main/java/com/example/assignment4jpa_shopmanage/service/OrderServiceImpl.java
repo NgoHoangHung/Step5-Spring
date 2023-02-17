@@ -11,12 +11,14 @@ import com.example.assignment4jpa_shopmanage.repository.CustomerRepository;
 import com.example.assignment4jpa_shopmanage.repository.OrderRepository;
 import com.example.assignment4jpa_shopmanage.repository.ProductRepository;
 import com.example.assignment4jpa_shopmanage.repository.WalletRepository;
+import jakarta.transaction.Transactional;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Component
 public class OrderServiceImpl implements OrderService {
@@ -29,6 +31,15 @@ public class OrderServiceImpl implements OrderService {
     @Autowired
     private WalletRepository walletRepository;
 
+    @Override
+    public List<OrderDTO> getAllOrder() {
+        ModelMapper mapper = new ModelMapper();
+        return orderRepository.findAll().stream()
+                .map(order -> mapper.map(order, OrderDTO.class))
+                .collect(Collectors.toList());
+    }
+
+    @Transactional
     @Override
     public String createOrder(OrderDTO dto) {
         Order order = new Order();
