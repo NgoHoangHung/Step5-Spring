@@ -1,0 +1,14 @@
+/* .title{
+
+    text-align: center;
+    
+} */
+.info .row{
+    background-color: aliceblue;
+    text-align: center;
+    
+}
+
+.info .row .col-12 >* {
+    margin-block: 10px;
+}
