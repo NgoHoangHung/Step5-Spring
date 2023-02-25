@@ -1,8 +1,5 @@
 package com.example.assignment6carservice.model.dto;
 
-import com.example.assignment6carservice.model.entity.Orderr;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
 import lombok.Data;
 
 @Data
@@ -11,5 +8,7 @@ public class ProductDTO {
     private String name;
     private String color;
     private String status;
-    private OrderrDTO orderrDTO;
+    private String code;
+//    private OrderrDTO orderrDTO;
+    private CustomerDTO customerDTO;
 }

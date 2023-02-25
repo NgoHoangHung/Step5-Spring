@@ -1,5 +1,6 @@
 package com.example.assignment6carservice.model.entity;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -15,6 +16,6 @@ public class Service {
     private String name;
     private double fee;
     @ManyToOne
-    @JoinColumn(name= "service_id")
+    @JoinColumn(name= "orderr_id")
     private Orderr orderr;
 }

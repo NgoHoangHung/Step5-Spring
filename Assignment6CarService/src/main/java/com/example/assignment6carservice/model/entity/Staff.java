@@ -1,24 +1,30 @@
 package com.example.assignment6carservice.model.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
-@Table
+import java.util.Set;
+
+@Entity
+@Table(name = "Staff")
 @Setter
 @Getter
-@Entity
 public class Staff {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
     private String phone;
+
     @OneToOne
     @JoinColumn(name = "wallet_id")
     private Wallet wallet;
 
-    @ManyToOne
-    @JoinColumn(name= "staff_id")
-    private Orderr orderr;
+    @JsonBackReference
+    @ManyToMany
+    @JoinTable(name = "staff_order", joinColumns = @JoinColumn(name = "orderr_id"),
+            inverseJoinColumns = @JoinColumn(name = "staff_id"))
+    private Set<Orderr> orderrs;
 }

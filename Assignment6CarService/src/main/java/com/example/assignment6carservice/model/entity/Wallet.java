@@ -14,5 +14,4 @@ public class Wallet {
     private int id;
     private String account_num;
     private double balance;
-
 }

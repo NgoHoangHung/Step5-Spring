@@ -1,12 +1,13 @@
 package com.example.digitalwallet.model.entity;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import lombok.Getter;
 import lombok.Setter;
-import org.hibernate.annotations.GenericGenerator;
 import org.springframework.stereotype.Component;
 
-import java.util.UUID;
 @Entity
 @Component
 @Getter

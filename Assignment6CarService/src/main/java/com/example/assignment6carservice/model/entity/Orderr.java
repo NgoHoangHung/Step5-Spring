@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.Date;
 import java.util.Set;
 
 @Entity
@@ -16,23 +17,25 @@ public class Orderr {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     @ManyToOne
-    @JoinColumn(name = "odder_id")
+    @JoinColumn(name = "customer_id")
     private Customer customer;
-    @JsonBackReference
-    @OneToMany(mappedBy = "orderr")
-    private Set<Staff> staffs;
 
-    @OneToMany(mappedBy = "orderr")
-    @JsonBackReference
-    private Set<Product> products;
+
+    @ManyToMany(mappedBy = "orderrs")
+    private Set<Staff> staffs;
 
     @JsonBackReference
     @OneToMany(mappedBy = "orderr")
     private Set<Service> services;
 
+    @OneToMany(mappedBy = "orderr")
+    @JsonBackReference
+    private Set<Product> products;
+
     private String note;
-    private String time_order;
-    private String time_estimate;
+    private Date time_order;
+    private Date time_estimate;
     private String status;
     private double total_price;
 }
+

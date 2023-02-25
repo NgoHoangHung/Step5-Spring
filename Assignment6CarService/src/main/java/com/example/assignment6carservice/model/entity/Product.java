@@ -15,7 +15,11 @@ public class Product {
     private String name;
     private String color;
     private String status;
+    private String code;
     @ManyToOne
-    @JoinColumn(name= "product_id")
+    @JoinColumn(name = "order_id")
     private Orderr orderr;
+    @ManyToOne
+    @JoinColumn(name = "customer_id")
+    private Customer customer;
 }
