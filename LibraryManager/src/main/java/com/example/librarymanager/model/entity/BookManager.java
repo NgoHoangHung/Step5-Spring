@@ -6,11 +6,11 @@ import lombok.Setter;
 import javax.persistence.*;
 
 @Entity
-@Table(name  = "book_ticket")
+@Table
 @Getter
 @Setter
 
-public class BookQuantity {
+public class BookManager {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
@@ -22,7 +22,7 @@ public class BookQuantity {
     private Integer quantity;
 
     @ManyToOne
-    @JoinColumn(name = "ticket_book_id")
+    @JoinColumn(name = "ticket_id")
     private TicketBook ticketBook;
 }
 

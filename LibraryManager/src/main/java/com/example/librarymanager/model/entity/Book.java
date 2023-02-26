@@ -1,6 +1,5 @@
 package com.example.librarymanager.model.entity;
 
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -24,9 +23,8 @@ public class Book {
     @JoinColumn(name = "type_id")
     private Type type;
 
-    @ManyToMany
-    @JoinColumn(name = "ticket_id")
-    private List<TicketBook> ticketBooks;
+    @OneToMany(mappedBy = "book")
+    private List<BookManager> bookManagers;
 
 
 }

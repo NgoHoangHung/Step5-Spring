@@ -1,5 +1,6 @@
 package com.example.librarymanager.model.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -22,12 +23,9 @@ public class TicketBook {
     private Borrower borrower;
 
     private Servicez servicez;
-
-    @ManyToMany(cascade = CascadeType.ALL)
-    @JoinTable(name = "book_ticket",
-            joinColumns = @JoinColumn(name = "ticket_book_id", referencedColumnName = "id", columnDefinition = "INT(11)"),
-            inverseJoinColumns = @JoinColumn(name = "book_id", referencedColumnName = "id", columnDefinition = "INT(11)"))
-    private List<Book> books;
+    @JsonBackReference
+    @OneToMany(mappedBy = "ticketBook",cascade = CascadeType.ALL)
+    private List<BookManager> bookManagers;
 
     private LocalDate creatAt;
     private LocalDate returnDay;
