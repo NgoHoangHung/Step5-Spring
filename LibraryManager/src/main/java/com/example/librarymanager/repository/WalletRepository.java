@@ -11,8 +11,8 @@ public interface WalletRepository extends JpaRepository<Wallet, Integer> {
 
     Wallet findByAccountNum(String account);
 
-//    @Query("SELECT w FROM Wallet w JOIN Customer c WHERE c.phone = :phone")
-//    Wallet findByCustomerPhone(String phone);
+    @Query("SELECT w FROM Wallet w JOIN Customer c WHERE c.phone = :phone")
+    Wallet findByCustomerPhone(String phone);
 
 
 //    boolean existsByBorrower_Phone(String phone);

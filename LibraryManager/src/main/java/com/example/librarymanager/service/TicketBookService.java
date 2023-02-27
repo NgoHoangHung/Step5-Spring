@@ -16,7 +16,7 @@ public interface TicketBookService {
     public String rentBook(TicketBookDTO dto);
     public String buyBook(TicketBookDTO dto);
     public String returnBook(TicketBookDTO dto);
-    public String lostBookTicket(TicketBookDTO dto,int quantity);
+    public String lostBookTicket(TicketBookDTO dto);
 
     public String updateTicket(TicketBookDTO dto);
     public String deleteTicket(int id);

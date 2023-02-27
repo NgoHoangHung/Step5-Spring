@@ -56,12 +56,12 @@ public class TicketBookServiceImpl implements TicketBookService {
     }
 
     @Override
-    public String lostBookTicket(TicketBookDTO dto, int quantity) {
-//        List<BookDTO> bookDTOList = dto.getBookList();
+    public String lostBookTicket(TicketBookDTO dto) {
+//        TicketBook ticketBook = ticketBookRepository.findById(dto.getId());
+//        List<BookManager> bookManagers = ticketBook.getBookManagers();
+//        List<BookManagerDTO>
 //
-//        for (BookDTO bookDTO : bookDTOList) {
-////        bookDTO
-//        }
+//    }
         return null;
     }
 
@@ -256,21 +256,36 @@ public class TicketBookServiceImpl implements TicketBookService {
 
     }
 
+    @Transactional
     @Override
     public String returnBook(TicketBookDTO dto) {
+        //tính tiền
+
         TicketBook ticketBook = ticketBookRepository.findById(dto.getId());
         LocalDate returnDate = LocalDate.now();
+        String note = "trả sách vào ngày: " + returnDate;
         long dates = ChronoUnit.DAYS.between(ticketBook.getCreatAt(), returnDate);
         ticketBook.setTotalPrice(dates * 10000);
+
+        //xem sách có mất không
+        List<BookManagerDTO> bookManagerDTOS = dto.getBookManagerDTOS(); //xem số lượng sách lúc trả
+
+        for (BookManagerDTO bookManagerDTO : bookManagerDTOS) {
+            BookManager bookManager = bookManagerRepository.findById(bookManagerDTO.getId());//xem số lượng sách ban đầu
+            Book book = bookManager.getBook();//kho sách
+
+            if (bookManager.getQuantity() > bookManagerDTO.getQuantity()) {
+                int lostQuantity = bookManager.getQuantity() - bookManagerDTO.getQuantity();
+                ticketBook.setTotalPrice(ticketBook.getTotalPrice() + lostQuantity * book.getPrice() * 0.85);
+                note += "\nquyển sách mang Id số: " + book.getId() + "\nthiếu " + lostQuantity + "quyển.";
+                book.setQuantity(book.getQuantity() + bookManagerDTO.getQuantity());
+            }
+            bookRepository.save(book);
+        }
         Customer customer = ticketBook.getCustomer();
         //nạp tiền cho trường hợp không đủ
         if (customer.getWallet().getBalance() == 0 ||
                 customer.getWallet().getBalance() < ticketBook.getTotalPrice()) {
-//            ChargeMoney chargeMoney = new ChargeMoney();
-//            chargeMoney.setWallet(customer.getWallet());
-//            chargeMoney.setDeposit(ticketBook.getTotalPrice() -
-//                    customer.getWallet().getBalance());
-//            walletService.chargeWallet(chargeMoney);
             return "hãy nạp đủ tiền để thanh toán";
         } else {
 
@@ -279,15 +294,16 @@ public class TicketBookServiceImpl implements TicketBookService {
                     ticketBook.getTotalPrice());
 
             Wallet walletCenter = walletRepository.findByAccountNum("123123");
-
             walletCenter.setBalance(walletCenter.getBalance() + ticketBook.getTotalPrice());
             walletRepository.saveAll(Arrays.asList(walletCenter, customer.getWallet()));
+
             ticketBook.setNote(ticketBook.getNote() + "\n đã trả sách vào " + returnDate);
             ticketBookRepository.save(ticketBook);
             customerRepository.save(customer);
-            return "đã thanh toán thành công";
+            return ticketBook.getNote().concat(note);
         }
     }
+
 
     @Override
     public String updateTicket(TicketBookDTO dto) {

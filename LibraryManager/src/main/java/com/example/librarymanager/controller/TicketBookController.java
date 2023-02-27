@@ -20,8 +20,18 @@ public class TicketBookController {
         return ResponseEntity.ok(ticketBookService.getAll1());
     }
 
-    @PostMapping("")
+    @PostMapping("/rent")
     public ResponseEntity<String> rentBorrowTicket(@RequestBody TicketBookDTO dto) {
         return ResponseEntity.ok(ticketBookService.rentBook(dto));
+    }
+
+    @PostMapping("/buy")
+    public ResponseEntity<String> buyBook(@RequestBody TicketBookDTO dto) {
+        return ResponseEntity.ok(ticketBookService.buyBook(dto));
+    }
+
+    @PutMapping("/return")
+    public ResponseEntity<String> returnBook(@RequestBody TicketBookDTO dto) {
+        return ResponseEntity.ok(ticketBookService.returnBook(dto));
     }
 }

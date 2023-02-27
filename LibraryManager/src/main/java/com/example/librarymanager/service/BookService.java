@@ -10,6 +10,7 @@ import java.util.List;
 public interface BookService {
     public Book getById(int id);
     public List<Book> getAll();
+    public List<Book> getByTicketId(int id);
     public String insertBook(BookDTO dto);
     public void createBook(BookDTO dto);
     public Book updateBook(BookDTO dto);
