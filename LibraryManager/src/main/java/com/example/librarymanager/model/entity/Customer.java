@@ -9,14 +9,14 @@ import javax.persistence.*;
 @Table
 @Getter
 @Setter
-public class Borrower {
+public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String name;
     private String phone;
     private String cccd;
-    @OneToOne
+    @OneToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "wallet_id")
     private Wallet wallet;
 }

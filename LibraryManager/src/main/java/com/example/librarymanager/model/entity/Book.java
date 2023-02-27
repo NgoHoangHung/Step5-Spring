@@ -1,5 +1,6 @@
 package com.example.librarymanager.model.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -19,10 +20,12 @@ public class Book {
     private String author;
     private double price;
     private Integer quantity;
+    private Status status;
+
     @ManyToOne
     @JoinColumn(name = "type_id")
     private Type type;
-
+    @JsonBackReference
     @OneToMany(mappedBy = "book")
     private List<BookManager> bookManagers;
 

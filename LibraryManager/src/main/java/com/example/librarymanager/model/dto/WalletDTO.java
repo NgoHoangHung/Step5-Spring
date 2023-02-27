@@ -4,7 +4,7 @@ import lombok.Data;
 
 @Data
 public class WalletDTO {
-    private Integer id;
+    private int id;
     private String accountnum;
     private Double charge;
 }

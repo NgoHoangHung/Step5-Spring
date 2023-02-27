@@ -1,5 +1,6 @@
 package com.example.librarymanager.service;
 
+import com.example.librarymanager.model.dto.ChargeMoney;
 import com.example.librarymanager.model.dto.WalletDTO;
 import com.example.librarymanager.model.entity.Wallet;
 import org.springframework.stereotype.Service;
@@ -17,7 +18,7 @@ public interface WalletService {
 
     public void createWallet(WalletDTO dto);
 
-    public String chargeWallet(WalletDTO dto);
+    public String chargeWallet(ChargeMoney chargeMoney);
 
     public String deleteWallet(int id);
 }

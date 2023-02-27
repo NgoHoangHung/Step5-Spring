@@ -18,18 +18,17 @@ public class TicketBook {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @OneToOne()
-    @JoinColumn(name = "borrower_id")
-    private Borrower borrower;
+    @OneToOne(fetch =  FetchType.EAGER)
+    @JoinColumn(name = "customer_id")
+    private Customer customer;
 
     private Servicez servicez;
     @JsonBackReference
-    @OneToMany(mappedBy = "ticketBook",cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "ticketBook",cascade = CascadeType.ALL,fetch =  FetchType.EAGER)
     private List<BookManager> bookManagers;
 
     private LocalDate creatAt;
     private LocalDate returnDay;
-    private String status;
     private String note;
     private double totalPrice;
 

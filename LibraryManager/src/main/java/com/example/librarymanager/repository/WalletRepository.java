@@ -2,8 +2,8 @@ package com.example.librarymanager.repository;
 
 import com.example.librarymanager.model.entity.Wallet;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
 
 @Repository
 public interface WalletRepository extends JpaRepository<Wallet, Integer> {
@@ -11,8 +11,9 @@ public interface WalletRepository extends JpaRepository<Wallet, Integer> {
 
     Wallet findByAccountNum(String account);
 
-    @Query("SELECT w FROM Wallet w JOIN Borrower b WHERE b.phone = :phone")
-    Wallet findByBorrowerPhone(String phone);
+//    @Query("SELECT w FROM Wallet w JOIN Customer c WHERE c.phone = :phone")
+//    Wallet findByCustomerPhone(String phone);
 
-    boolean existsByBorrower_Phone(String phone);
+
+//    boolean existsByBorrower_Phone(String phone);
 }

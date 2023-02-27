@@ -8,7 +8,6 @@ import javax.persistence.*;
 
 @Data
 public class TypeDTO {
-    private Integer id;
+    private int id;
     private String name;
-//    private BookDTO book;
 }

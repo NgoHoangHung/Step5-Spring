@@ -3,7 +3,7 @@ package com.example.librarymanager.model.dto;
 import lombok.Data;
 
 @Data
-public class BorrowerDTO {
+public class CustomerDTO {
     private String name;
     private String phone;
     private String cccd;

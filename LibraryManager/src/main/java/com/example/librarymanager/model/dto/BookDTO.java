@@ -12,11 +12,10 @@ import java.util.List;
 
 @Data
 public class BookDTO {
-
     private int id;
     private String author;
     private String name;
     private double price;
     private TypeDTO type;
-    private Integer quantityTransactions;
+    private int quantityTransactions;
 }

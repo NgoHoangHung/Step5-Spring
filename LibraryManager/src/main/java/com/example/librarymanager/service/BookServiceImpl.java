@@ -38,7 +38,7 @@ public class BookServiceImpl implements BookService {
             Book book = new Book();
             book.setName(dto.getName());
             book.setAuthor(dto.getAuthor());
-            book.setType(typeRepository.findById(dto.getType().getId()).get());
+            book.setType(typeRepository.findById(dto.getType().getId()));
             book.setQuantity(dto.getQuantityTransactions());
             book.setPrice(dto.getPrice());
         }

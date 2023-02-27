@@ -1,5 +1,6 @@
 package com.example.librarymanager.service;
 
+import com.example.librarymanager.model.dto.ChargeMoney;
 import com.example.librarymanager.model.dto.WalletDTO;
 import com.example.librarymanager.model.entity.Wallet;
 import com.example.librarymanager.repository.WalletRepository;
@@ -48,12 +49,13 @@ public class WalletServiceImpl implements WalletService {
     }
 
     @Override
-    public String chargeWallet(WalletDTO dto) {
-        Wallet wallet = walletRepository.findByAccountNum(dto.getAccountnum());
-        wallet.setBalance(wallet.getBalance() + dto.getCharge());
+    public String chargeWallet(ChargeMoney chargeMoney) {
+
+        Wallet wallet = walletRepository.findByAccountNum(chargeMoney.getWallet().getAccountNum());
+        wallet.setBalance(wallet.getBalance() + chargeMoney.getDeposit());
         LocalDate date = LocalDate.now();
         walletRepository.save(wallet);
-        return "nạp tiền thành công lúc " + date ;
+        return "nạp tiền thành công lúc " + date;
     }
 
     @Override
