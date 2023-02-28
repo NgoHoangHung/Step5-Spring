@@ -42,10 +42,15 @@
     font-weight: bold;
   }
   
-  .form-icon {
+  .form-icon img{
+    /* background-size: 100% auto; */
+/* 
     font-size: 20px;
-    color: #4CAF50;
+    color: #4CAF50; */
+    width: 20px; /* giảm kích thước chiều rộng xuống 20px */
+    height: 20px; /* giảm kích thước chiều cao xuống 20px */
   }
+  
   
   .form-content {
     width: 100%;

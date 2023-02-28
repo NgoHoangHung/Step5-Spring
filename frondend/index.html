@@ -16,7 +16,9 @@
       <div class="container">
         <div class="form-header">
           <div class="form-title">FORM JOB APPLICATION</div>
-          <div class="form-icon">CHÈN SAU</div>
+          <div class="form-icon">
+            <img src="assets/img/CV picture.jpg"  alt="">
+          </div>
         </div>
         <div class="form-content">
           <div class="table-title">APPLICATION FOR EMPLOYMENT</div>
@@ -64,15 +66,23 @@
               <td><textarea name="workExperience" rows="5" required placeholder=""></textarea></td>
             </tr>
           </table>
-          <div style="text-align: center;">
-            <button class="btn btn-primary" type="submit">Submit</button>
+          <div id="submit-btn-container" style="text-align: center;">
+            <button id="submit-btn" class="btn btn-primary" type="submit" onclick="changeText()">Submit</button>
           </div>
+          
         </div>
       </div>
     </div>
     
   
     <script src="./lib/bootstrap-5.0.2-dist/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function changeText() {
+  var btn = document.getElementById("submit-btn");
+  btn.innerHTML = "Submitted";
+}
+
+  </script>
   </body>
   </html>
   
