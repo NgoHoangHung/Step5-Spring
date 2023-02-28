@@ -2,7 +2,6 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>dân trí</title>
     <link
@@ -10,122 +9,70 @@
       href="./lib/bootstrap-5.0.2-dist/bootstrap/css/bootstrap.min.css"
     />
     <link rel="stylesheet" href="./main.css">
+   
   </head>
   <body>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-6">
-          <div class="">FORM</div>
-          <div class="">JOB APPLICATION</div>
+    <div class="card">
+      <div class="container">
+        <div class="form-header">
+          <div class="form-title">FORM JOB APPLICATION</div>
+          <div class="form-icon">CHÈN SAU</div>
         </div>
-        <div class="col-sm-6">
-          <div class="ICON">CHÈN SAU</div>
+        <div class="form-content">
+          <div class="table-title">APPLICATION FOR EMPLOYMENT</div>
+          <table>
+            <tr>
+              <th>Name:</th>
+              <td><input type="text" autocomplete="off" required name="name" placeholder=""></td>
+            </tr>
+            <tr>
+              <th>Surname:</th>
+              <td><input type="text" autocomplete="off" required name="surname" placeholder=""></td>
+            </tr>
+            <tr>
+              <th>Date of Birth:</th>
+              <td><input type="text" autocomplete="off" required name="dateOfBirth" placeholder=""></td>
+            </tr>
+            <tr>
+              <th>Gender:</th>
+              <td>
+                <div class="radio-group">
+                  <label><input type="radio" name="gender" value="male">Male</label>
+                  <label><input type="radio" name="gender" value="female">Female</label>
+                  <label><input type="radio" name="gender" value="other">Other</label>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th>Address:</th>
+              <td><input type="text" autocomplete="off" required name="address" placeholder=""></td>
+            </tr>
+            <tr>
+              <th>Phone Number:</th>
+              <td><input type="text" autocomplete="off" required name="phoneNumber" placeholder=""></td>
+            </tr>
+            <tr>
+              <th>Email:</th>
+              <td><input type="email" autocomplete="off" required name="email" placeholder=""></td>
+            </tr>
+            <tr>
+              <th>Education:</th>
+              <td><input type="text" autocomplete="off" required name="education" placeholder=""></td>
+            </tr>
+            <tr>
+              <th>Work Experience:</th>
+              <td><textarea name="workExperience" rows="5" required placeholder=""></textarea></td>
+            </tr>
+          </table>
+          <div style="text-align: center;">
+            <button class="btn btn-primary" type="submit">Submit</button>
+          </div>
         </div>
       </div>
     </div>
-    <div class="info">
-      <div class="row">
-        <div class="col-12">
-          <div class="title">APPLICATION FOR EMPLOYMENT</div>
-          <!-- <div class="row"> -->
-            <div class="name">
-              <div class="col-12">
-              Name: 
-              <input
-              type="text"
-              autocomplete="off"
-              required
-              name="name"
-              placeholder=""
-              />
-            </div>
-          </div>
-          <!-- </div> -->
-          <div class="surname">
-            SURNAME:  
-            <input
-              type="text"
-              autocomplete="off"
-              required
-              name="surname"
-              placeholder=""
-            />
-          </div>
-          <div class="dateOfBirth">
-            DATE OF BIRHTH: 
-            <input
-              type="text"
-              autocomplete="off"
-              required
-              name="dateOfBirth"
-              placeholder=""
-            />
-          </div>
-          <div class="address">
-            ADDRESS: 
-            <input
-              type="text"
-              autocomplete="off"
-              required
-              name="address"
-              placeholder=""
-            />
-          </div>
-          <div class="gender">
-              
-            <span> GENDER: </span>
-            <input name="gender" type="radio" id="answer-1" />
-            <label for="answer-1">Nam</label>
-            <input name="gender" type="radio" id="answer-2" />
-            <label for="answer-2">Nữ</label>
-          </span>
-          </div>
-          <div class="email">
-            EMAIL: 
-            <input
-              type="text"
-              autocomplete="off"
-              required
-              name="name"
-              placeholder=""
-            />
-          </div>
-          <div class="phone">
-            PHONE:  
-            <input
-              type="text"
-              autocomplete="off"
-              required
-              name="name"
-              placeholder=""
-            />
-          </div>
-          <div class="qualification">
-            QUALIFICATION:  
-            <input
-              type="text"
-              autocomplete="off"
-              required
-              name="qualification"
-              placeholder=""
-            />
-          </div>
-          <div class="experience">
-            EXPERIENCE:  
-            <input
-              type="text"
-              autocomplete="off"
-              required
-              name="experience"
-              placeholder=""
-            /> <span>YEARS</span>
-          </div>
-        </div>
-        </div>
-
-      </div>
-
-    </div>
+    
+  
+    <script src="./lib/bootstrap-5.0.2-dist/bootstrap/js/bootstrap.bundle.min.js"></script>
   </body>
-  <script src="./lib/bootstrap-5.0.2-dist/bootstrap/js/bootstrap.bundle.min.js"></script>
-</html>
+  </html>
+  

@@ -1,22 +1,110 @@
-/* .title{
-
-    text-align: center;
-    
-} */
-.info .row{
-    background-color: aliceblue;
-    text-align: center;
-    
-}
-
-.info .row .col-12 >* {
-    margin-block: 10px;
-}
-.col-12 {
-    flex: 0 0 auto;
+/* Responsive styles */
+@media (max-width: 768px) {
+    .card {
+      width: 90%;
+      margin: 0 auto;
+    }
+  }
+  
+  /* Hover styles */
+  .btn:hover {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  /* General styles */
+  .card {
+    width: 50%;
+    margin: 50px auto;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .form-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .form-title {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .form-icon {
+    font-size: 20px;
+    color: #4CAF50;
+  }
+  
+  .form-content {
+    width: 100%;
+  }
+  
+  .table-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    padding: 10px;
     text-align: left;
-}
-.title {
-    text-align: left;
-}
+    border-bottom: 1px solid #ddd;
+  }
+  
+  th {
+    font-weight: bold;
+  }
+  
+  input[type=text], input[type=email], textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+  
+  .radio-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  .radio-group label {
+    margin-right: 20px;
+    font-weight: normal;
+  }
+  
+  .btn {
+    background-color: #008CBA;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  
+  .btn:focus {
+    outline: none;
+  }
+  
