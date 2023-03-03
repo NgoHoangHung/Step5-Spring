@@ -1,0 +1,54 @@
+@EnableWebSecurity;
+   là một annotation trong Spring Security framework,
+   nó được sử dụng để bật tính năng bảo mật web trên ứng dụng Spring.
+   Khi chúng ta sử dụng @EnableWebSecurity,
+   chúng ta có thể định nghĩa cấu hình bảo mật trên lớp WebSecurityConfigurerAdapter,
+   để quản lý quyền truy cập và xác thực người dùng đối với các tài nguyên trên ứng dụng web.
+
+lớp UserDetailsService trong security của spring boot
+Lớp UserDetailsService được sử dụng trong Spring Security để xác thực người dùng.
+Khi một người dùng cố gắng đăng nhập vào ứng dụng của bạn,
+thông tin đăng nhập sẽ được chuyển đến UserDetailsService để kiểm tra xem người dùng có tồn tại hay không.
+Lớp UserDetailsService đóng vai trò cung cấp thông tin người dùng cho Spring Security
+Nó được sử dụng để lấy thông tin người dùng từ cơ sở dữ liệu hoặc bất kỳ nguồn dữ liệu nào khác.
+Nó cung cấp một phương thức loadUserByUsername()để trả về một đối tượng UserDetails
+cho người dùng tương ứng với tên đăng nhập được cung cấp.
+Đối tượng UserDetails chứa thông tin về người dùng như
+tên đăng nhập,mật khẩu, quyền truy cập và các thông tin khác.
+ Nó được sử dụng bởi Spring Security để thực hiện xác thực và kiểm tra phân quyền người dùng khi họ cố gắng truy cập vào các tài nguyên được bảo vệ.
+
+ var user1 = User.withUsername("hungnh").password("123").authorities("read").build();
+ Dòng code này sử dụng để tạo ra một đối tượng User trong Spring Security.
+  Cụ thể, nó sử dụng method tĩnh withUsername() để thiết lập tên đăng nhập cho người dùng (hungnh),
+   sử dụng method password() để thiết lập mật khẩu cho người dùng (123),
+   và sử dụng method authorities() để thiết lập các quyền (read).
+
+Sau khi thiết lập các thuộc tính của đối tượng User,
+method build() được sử dụng để trả về một đối tượng User đã được tạo.
+Đối tượng User này có thể được sử dụng để xác thực và phân quyền trong ứng dụng Spring Security.
+
+ Đoạn mã return new InMemoryUserDetailsManager(user1, user2);
+ có ý nghĩa là tạo ra một đối tượng InMemoryUserDetailsManager với danh sách các người dùng
+  được cung cấp trong đối số.
+
+ InMemoryUserDetailsManager là một lớp cung cấp các phương thức để quản lý danh sách người dùng
+  trong bộ nhớ của ứng dụng. Trong đoạn mã này, các người dùng user1 và user2 được cung cấp cho đối tượng
+  InMemoryUserDetailsManager để quản lý và xác thực trong ứng dụng.
+   Khi phương thức được gọi, đối tượng InMemoryUserDetailsManager sẽ trả về danh sách các người dùng đã
+   được cấu hình.
+
+Lớp PasswordEncoder trong Spring Security là một interface,
+ được sử dụng để mã hóa mật khẩu người dùng.
+  Nó được sử dụng để đảm bảo rằng các mật khẩu được lưu trữ trong cơ sở dữ liệu của ứng dụng được mã hóa
+  để đảm bảo tính bảo mật.
+Spring Security cung cấp một số lớp implementation của PasswordEncoder interface như sau:
+
+BCryptPasswordEncoder: mã hóa mật khẩu sử dụng thuật toán BCrypt
+NoOpPasswordEncoder: không mã hóa mật khẩu, được sử dụng cho mục đích kiểm tra và xác thực mật khẩu trong quá
+trình phát triển ứng dụng
+Pbkdf2PasswordEncoder: mã hóa mật khẩu sử dụng thuật toán PBKDF2
+SCryptPasswordEncoder: mã hóa mật khẩu sử dụng thuật toán SCrypt
+PasswordEncoder có tính chất giúp ứng dụng xác định được cách mã hóa và giải mã mật khẩu của người dùng.
+Việc sử dụng một mã hóa mật khẩu mạnh sẽ giúp tăng tính bảo mật cho ứng dụng của bạn.
+Khi người dùng đăng nhập, mật khẩu của họ sẽ được mã hóa và so sánh với mật khẩu đã được mã hóa trong cơ sở dữ liệu.
+Nếu hai giá trị tương đương nhau, người dùng sẽ được cho phép truy cập vào ứng dụng.
