@@ -1,39 +1,52 @@
 package com.example.assignmentsecurity.controller;
 
 import com.example.assignmentsecurity.model.Product;
+import com.example.assignmentsecurity.repository.ProductRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
 
-@RestController
+@Controller
 @RequestMapping("/api")
 public class ProductController {
+
+    @Autowired
+    private ProductRepository productRepository;
+
     @GetMapping("/products")
-    public List<Product> getAll() {
-        List<Product> products = new ArrayList();
-        products.add(new Product("apple", 150));
-        products.add(new Product("mango", 100));
-        products.add(new Product("ringle", 250));
-        return products;
+    public ResponseEntity<List<Product>> getAll() {
+        return ResponseEntity.ok(productRepository.findAll());
     }
 
-    @Configuration
-    public class SecurityConfig extends WebSecurityConfigurerAdapter {
-        @Override
-        protected void configure(HttpSecurity http) throws Exception {
-            http
-                    .authorizeRequests()
-                    .antMatchers("/hello").permitAll()
-                    .anyRequest().authenticated()
-                    .and()
-                    .formLogin()
-                    .loginProcessingUrl("/login")
-                    .permitAll();
-        }
+    @GetMapping("/products/{id}")
+    public ResponseEntity<Product> getById(@PathVariable int id) {
+        return ResponseEntity.ok(productRepository.findById(id).get());
     }
+
+    @PostMapping("/products")
+    public String insertProducts(@RequestBody Product product) {
+        productRepository.save(product);
+        return "đã thêm thành công";
+    }
+
+    @PutMapping("/updateproducts/{id}")
+    public String updateProducts(@RequestBody Product productTmp, @PathVariable int id, Model model) {
+        if (productRepository.existsById(id)) {
+            Product product = productRepository.findById(id).get();
+            product.setName(productTmp.getName());
+            product.setPrice(productTmp.getPrice());
+            return "đã sửa thành công";
+        } else {
+            String errorMessage = "Not Found Product with Id: " + id;
+            model.addAttribute("errorMessage", errorMessage);
+            return "error";
+        }
+//            throw new AkioException("Not Found Product with Id: " + id);
+    }
+
 
 }

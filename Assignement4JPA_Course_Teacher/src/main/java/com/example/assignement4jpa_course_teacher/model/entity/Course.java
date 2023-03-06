@@ -14,10 +14,10 @@ import java.util.Set;
 public class Course {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private int id;
     private String nameCourse;
     @Column(name = "Số tiết")
-    private Integer numberOfLectures;
+    private int numberOfLectures;
     private int price;
     private String code;
     private String creatAt;
