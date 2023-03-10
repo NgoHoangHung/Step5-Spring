@@ -6,7 +6,7 @@ import com.opencsv.CSVReader;
 import com.opencsv.CSVWriter;
 import com.opencsv.bean.CsvToBeanBuilder;
 import com.opencsv.exceptions.CsvException;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -14,8 +14,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-
-@Service
+@Component
 public class BookDao extends Dao {
 
     @Override
@@ -74,17 +73,25 @@ public class BookDao extends Dao {
     }
 
     public Book findById(int id) {
+
         List<Book> listBook = new ArrayList<>();
         try {
             FileReader reader = new FileReader("Book.csv");
             CsvToBeanBuilder<Book> csvToBeanBuilder = new CsvToBeanBuilder<Book>(reader);
             listBook = csvToBeanBuilder.withType(Book.class).build().parse();
+//            if (listBook.size() < id) return null;
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         } catch (IOException e) {
             throw new RuntimeException(e);
-            return listBook.get(id);
+
         }
 
-
+        for (Book book : listBook) {
+            if (book.getId() == id) return book;
+        }
+        return null;
     }
+
+
+}

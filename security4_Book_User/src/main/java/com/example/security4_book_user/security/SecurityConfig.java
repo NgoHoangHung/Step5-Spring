@@ -20,32 +20,28 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth.authenticationProvider(authenProvider);
+        auth
+                .authenticationProvider(authenProvider);
     }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-    // chỗ này em phân vân luồng chạy kiểu gì
-
         http
                 .formLogin()
                 .and()
                 .authorizeRequests()
-                .antMatchers("/api/**").hasAnyRole("READ")
-                .antMatchers("/api/**").hasAnyRole("READ")
-                .antMatchers("/api/**").hasAnyRole("READ")
-                .antMatchers("/api/**").hasAnyRole("READ")
-                .antMatchers("/api/**").hasAnyRole("READ")
+                .antMatchers("/api").hasAnyAuthority("READ","SEARCH","EDIT")
+                .antMatchers("/api/add").hasAnyAuthority("CREATE","READ","DELETE","EDIT","SEARCH")
+                .antMatchers("/api/search").hasAnyAuthority("DELETE")
+                .antMatchers("/api/login").hasAnyAuthority("SEARCH")
                 .antMatchers("/api/**").permitAll();
     }
 
     @Bean
     public InMemoryUserDetailsManager inMemoryUserDetailsManager() {
         Authority authority = new Authority();
-
-
         User user1 = new User("read", "123");
-        user1.setAuthorities(Arrays.asList(authority.getAuthority("READ")));
+        user1.setAuthorities(Arrays.asList(authority.getAuthority("READ"), authority.getAuthority("CREATE")));
         User user2 = new User("create", "123");
         user2.setAuthorities(Arrays.asList(authority.getAuthority("CREATE")));
         User user3 = new User("delete", "123");

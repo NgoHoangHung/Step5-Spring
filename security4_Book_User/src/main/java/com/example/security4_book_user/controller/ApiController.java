@@ -1,20 +1,43 @@
 package com.example.security4_book_user.controller;
 
 import com.example.security4_book_user.model.Book;
+import com.example.security4_book_user.model.Search;
 import com.example.security4_book_user.service.BookDao;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api")
 public class ApiController {
     @Autowired
     private BookDao bookDao;
+//    @GetMapping(value = "/username", produces = MediaType.TEXT_HTML_VALUE)
+//    @ResponseBody
+//    public String getUsername(Authentication authentication) {
+//        String username = authentication.getName();
+//        return "<h1>Tên đăng nhập: " + username + "</h1>";
+//    }
+    @GetMapping(value = "/userAuthen", produces = MediaType.TEXT_HTML_VALUE)
+    @ResponseBody
+    public String getUserAuthen(Authentication authentication) {
+        String username = authentication.getName();
+        List<String> authorities = authentication.getAuthorities().stream()
+                .map(GrantedAuthority::getAuthority)
+                .collect(Collectors.toList());
+        return "<h1>tên đang nhập:  " + username + "</h1>" + "<p>quyền: " + authorities + "</p>";
+    }
 
+    @GetMapping("/home")
+public String home(){
+    return "index.html";
+}
     @GetMapping
     public ResponseEntity<String> test1() {
         return ResponseEntity.ok("test1");
@@ -30,27 +53,27 @@ public class ApiController {
         return ResponseEntity.ok(bookDao.findById(id));
     }
 
-    @GetMapping
-    public ResponseEntity<String> method1() {
+    @PostMapping("/save")
+    public ResponseEntity<String> insert() {
         return ResponseEntity.ok("đã thêm thành công");
     }
 
-    @GetMapping
-    public ResponseEntity<String> method1() {
-        return ResponseEntity.ok("đã thêm thành công");
+    @DeleteMapping("/delete/{id}")
+    public ResponseEntity<String> deleteById(@PathVariable int id) {
+        return ResponseEntity.ok("xóa thành công");
     }
 
-    @GetMapping
-    public ResponseEntity<String> method1() {
-        return ResponseEntity.ok("đã thêm thành công");
+    @PutMapping("/edit/{id}")
+    public ResponseEntity<String> edit() {
+        return ResponseEntity.ok("đã sửa thành công");
     }
 
-    @GetMapping
-    public ResponseEntity<String> method1() {
-        return ResponseEntity.ok("đã thêm thành công");
+    @GetMapping("/search")
+    public ResponseEntity<String> search(Search keyword) {
+        return ResponseEntity.ok("xem qua tí");
     }
 
-    @GetMapping
+    @PostMapping("/search")
     public ResponseEntity<String> method1() {
         return ResponseEntity.ok("đã thêm thành công");
     }
