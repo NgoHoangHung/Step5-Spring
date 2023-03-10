@@ -39,7 +39,8 @@ public class CustomAuthenProvider implements AuthenticationProvider {
         //sau khi lấy xong được user name password thì ta tiến hành tìm và đối chiếu
         try {
             UserDetails userDetails = inMemoryUserDetailsManager.loadUserByUsername(username);
-            /* phương thức loadUserByUsername tạo ra một đối trượgn UserDetails chứ chưa làm gì cả. nó bao gồm các thông tin
+            /* phương thức loadUserByUsername tạo ra một đối tượng UserDetails chứ chưa làm gì cả.
+             nó bao gồm các thông tinre
             * User(user.getUsername(), user.getPassword(), user.isEnabled(), user.isAccountNonExpired(),
 				user.isCredentialsNonExpired(), user.isAccountNonLocked(), user.getAuthorities());
             * */

@@ -26,7 +26,8 @@ import java.util.Map;
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
-    private CustomAuthenProvider authenProvider; //sử dụng bean này để truyền authentication vào trong AuthenticationManagerBuilder
+    private CustomAuthenProvider authenProvider;
+    //sử dụng bean này để truyền authentication vào trong AuthenticationManagerBuilder
 
     @Bean
     public InMemoryUserDetailsManager inMemoryUserDetailsManager() {
