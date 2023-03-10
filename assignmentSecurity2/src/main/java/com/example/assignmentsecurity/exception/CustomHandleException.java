@@ -12,4 +12,9 @@ public class CustomHandleException {
     public AkioExceptionResponse handleNotFoundException(AkioException e) {
         return new AkioExceptionResponse(HttpStatus.NOT_FOUND, e.getMessage());
     }
+//    @ExceptionHandler(AkioException.class)
+//    @ResponseStatus(HttpStatus.FORBIDDEN)
+//    public static AkioExceptionResponse forbiddenException(AkioException e) {
+//        return new AkioExceptionResponse(HttpStatus.FORBIDDEN, e.getMessage());
+//    }
 }
