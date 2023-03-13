@@ -2,12 +2,13 @@ package com.example.security4_book_user.controller;
 
 import com.example.security4_book_user.model.Book;
 import com.example.security4_book_user.model.Search;
-import com.example.security4_book_user.service.BookDao;
+import com.example.security4_book_user.service.Dao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -17,8 +18,9 @@ import java.util.stream.Collectors;
 @RequestMapping("/api")
 public class ApiController {
     @Autowired
-    private BookDao bookDao;
-//    @GetMapping(value = "/username", produces = MediaType.TEXT_HTML_VALUE)
+    private Dao bookDao;
+
+    //    @GetMapping(value = "/username", produces = MediaType.TEXT_HTML_VALUE)
 //    @ResponseBody
 //    public String getUsername(Authentication authentication) {
 //        String username = authentication.getName();
@@ -35,12 +37,15 @@ public class ApiController {
     }
 
     @GetMapping("/home")
-public String home(){
-    return "index.html";
-}
-    @GetMapping
-    public ResponseEntity<String> test1() {
-        return ResponseEntity.ok("test1");
+    public String home() {
+        return "index.html";
+    }
+
+    @GetMapping("/read-file")
+    public String read(Model model) {
+        List<Book> books = bookDao.read();
+        model.addAttribute("books", books);
+        return "listbook";
     }
 
     @GetMapping("/add")
@@ -48,10 +53,10 @@ public String home(){
         return ResponseEntity.ok("đã thêm thành công");
     }
 
-    @GetMapping("/id")
-    public ResponseEntity<Book> findById(@PathVariable int id) {
-        return ResponseEntity.ok(bookDao.findById(id));
-    }
+//    @GetMapping("/id")
+//    public ResponseEntity<Book> findById(@PathVariable int id) {
+//        return ResponseEntity.ok(bookDao.findById(id));
+//    }
 
     @PostMapping("/save")
     public ResponseEntity<String> insert() {

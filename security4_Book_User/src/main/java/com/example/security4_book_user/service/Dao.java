@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.util.List;
 @Service
 public abstract class Dao {
-   abstract List<String[]> read();
+   abstract  public  List<Book> read();
     abstract String insert(String[] data) throws IOException;
     abstract String insert( List<String[]> data) throws IOException;
 
@@ -18,6 +18,6 @@ public abstract class Dao {
 
     abstract String delete(int id);
 
-    abstract Book search(Search keyword);
+    abstract Book search(Search keyword,String fileName);
 
 }

@@ -14,21 +14,22 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+
 @Component
 public class BookDao extends Dao {
 
     @Override
-    List<String[]> read() {
-        List<String[]> listBook = new ArrayList<>();
+    public List<Book> read() {
+        List<Book> listBook = new ArrayList<>();
         try {
             FileReader reader = new FileReader("Book.csv");
             CSVReader csvReader = new CSVReader(reader);
-            listBook = csvReader.readAll();
+            CsvToBeanBuilder<Book> csvToBeanBuilder = new CsvToBeanBuilder<Book>(reader);
+
+            listBook = csvToBeanBuilder.withType(Book.class).build().parse();
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         } catch (IOException e) {
-            throw new RuntimeException(e);
-        } catch (CsvException e) {
             throw new RuntimeException(e);
         }
         return listBook;
@@ -66,13 +67,13 @@ public class BookDao extends Dao {
     }
 
     @Override
-    public Book search(Search keyword) {
+    Book search(Search keyword, String fileName) {
         Book book = new Book();
 
         return book;
     }
 
-    public Book findById(int id) {
+    public List<Book> read1() {
 
         List<Book> listBook = new ArrayList<>();
         try {
@@ -86,10 +87,10 @@ public class BookDao extends Dao {
             throw new RuntimeException(e);
 
         }
-
-        for (Book book : listBook) {
-            if (book.getId() == id) return book;
-        }
+//
+//        for (Book book : listBook) {
+//            if (book.getId() == id) return book;
+//        }
         return null;
     }
 
