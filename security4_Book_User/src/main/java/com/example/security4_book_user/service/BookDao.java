@@ -19,13 +19,11 @@ import java.util.List;
 public class BookDao extends Dao {
 
     @Override
-    public List<Book> read() {
+    public List<Book> getListBook() {
         List<Book> listBook = new ArrayList<>();
         try {
             FileReader reader = new FileReader("Book.csv");
-            CSVReader csvReader = new CSVReader(reader);
             CsvToBeanBuilder<Book> csvToBeanBuilder = new CsvToBeanBuilder<Book>(reader);
-
             listBook = csvToBeanBuilder.withType(Book.class).build().parse();
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);

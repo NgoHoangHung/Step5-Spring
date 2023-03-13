@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.util.List;
 @Service
 public abstract class Dao {
-   abstract  public  List<Book> read();
+   abstract  public  List<Book> getListBook();
     abstract String insert(String[] data) throws IOException;
     abstract String insert( List<String[]> data) throws IOException;
 
