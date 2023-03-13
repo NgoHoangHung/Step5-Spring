@@ -54,6 +54,14 @@ public class ApiController {
         return "listbook.html";
     }
 
+    @GetMapping("/book/{id}")
+    public String getBook(Model model, @PathVariable int id) {
+        Book book = bookDao.getById(id);
+        model.addAttribute("book", book);
+        return "bookcard.html";
+    }
+//    return ResponseEntity.ok(bookDao.getById(id));
+
     @GetMapping("/add")
     public ResponseEntity<String> add() {
         return ResponseEntity.ok("đã thêm thành công");
