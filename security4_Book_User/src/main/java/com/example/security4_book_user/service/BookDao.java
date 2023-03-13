@@ -54,10 +54,33 @@ public class BookDao extends Dao {
     }
 
     @Override
-    public String insert(String[] data) throws IOException {
-        CSVWriter writer = new CSVWriter(new FileWriter("Book.csv", true));
-        writer.writeNext(data);
-        writer.close();
+    public String insert(Book book) {
+        List<Book> listBook = new ArrayList<>();
+        try {
+            FileReader reader = new FileReader("Book.csv");
+            CsvToBeanBuilder<Book> csvToBeanBuilder = new CsvToBeanBuilder<Book>(reader);
+            listBook = csvToBeanBuilder.withType(Book.class).build().parse();
+            reader.close();
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        for (Book book1 : listBook) {
+            if (book.getTitle().equals(book1.getTitle())) return "bản ghi đã tồn tại";
+        }
+        book.setId(listBook.size() + 1);
+        try {
+
+            CSVWriter writer = new CSVWriter(new FileWriter("Book.csv", true));
+            String[] bookInput = { String.valueOf(book.getId()), book.getTitle(), book.getDescription() };
+            writer.writeNext(bookInput);
+            writer.close();
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
         return "đã thêm thành công bản ghi";
     }
 

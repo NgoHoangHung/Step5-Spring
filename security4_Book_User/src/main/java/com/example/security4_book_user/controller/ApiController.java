@@ -12,6 +12,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -62,9 +63,9 @@ public class ApiController {
     }
 //    return ResponseEntity.ok(bookDao.getById(id));
 
-    @GetMapping("/add")
-    public ResponseEntity<String> add() {
-        return ResponseEntity.ok("đã thêm thành công");
+    @PostMapping("/add")
+    public ResponseEntity<String> insert(@RequestBody Book book) throws IOException {
+        return ResponseEntity.ok(bookDao.insert(book));
     }
 
 //    @GetMapping("/id")
