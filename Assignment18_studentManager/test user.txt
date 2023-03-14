@@ -1,0 +1,10 @@
+insert into User (name, email, password, score, phone) values ('Gallard Slowgrave', 'gslowgrave0@wufoo.com', '8RnbbJv', 13, '540 993 4993');
+insert into User (name, email, password, score, phone) values ('Casie Eilhertsen', 'ceilhertsen1@parallels.com', 'mtmztYek', 33, '206 525 5530');
+insert into User (name, email, password, score, phone) values ('Willabella Huffer', 'whuffer2@bloglovin.com', '5aa70r', 3, '303 177 4427');
+insert into User (name, email, password, score, phone) values ('Ruddie Dameisele', 'rdameisele3@de.vu', 'U2GCevRH', 32, '937 653 3889');
+insert into User (name, email, password, score, phone) values ('Richmond Butt Gow', 'rbutt4@ask.com', 'xeLluFw9', 11, '182 563 9195');
+insert into User (name, email, password, score, phone) values ('Even Claridge', 'eclaridge5@mlb.com', 'QmLXx7yj', 36, '307 607 1910');
+insert into User (name, email, password, score, phone) values ('Pancho MacNeice', 'pmacneice6@buzzfeed.com', 'LT9WTre', 77, '800 327 8129');
+insert into User (name, email, password, score, phone) values ('Prudy O''Fielly', 'pofielly7@ibm.com', 'h0pIRzO', 100, '889 385 5463');
+insert into User (name, email, password, score, phone) values ('Colver Ewing', 'cewing8@ucla.edu', 'w5aMEQYEl', 89, '813 467 0501');
+insert into User (name, email, password, score, phone) values ('Haley Schachter', 'hschachter9@cornell.edu', 'N0hXvlPt2rs', 54, '393 865 1107');

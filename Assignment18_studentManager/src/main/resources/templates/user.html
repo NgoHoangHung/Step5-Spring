@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Student List</title>
+    <link rel="stylesheet" th:href="@{/assets/css/user.css}">
+
+</head>
+<body>
+<div class="container">
+    <div class="table-container">
+        <table>
+            <thead>
+            <tr>
+                <th>STT</th>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Password</th>
+                <th>Score</th>
+                <th>Phone</th>
+            </tr>
+            </thead>
+            <tbody>
+            <!-- Loop through the list of students and create a row for each one -->
+            <tr  th:each="user,i : ${users}">
+
+                <td th:text="${i.index +1 }"></td>
+                <td th:text="${user.id}"></td>
+                <td th:text="${user.name}"></td>
+                <td th:text="${user.email}"></td>
+                <td th:text="${user.password}"></td>
+                <td th:text="${user.score}"></td>
+                <td th:text="${user.phone}"></td>
+                <td>
+                    <button class="delete-btn show">Delete</button><button class="edit-btn show">Edit</button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <button id="create-btn" onclick="window.location.href='/users/create'">Add User</button>
+    <div>
+        <button id="prepage-btn" th:if="${currentPage > 1}" th:href="@{'/users/page/' + ${currentPage - 1}}">Previous Page</button>
+        <button id="nextpage-btn" th:if="${currentPage < totalPages}" th:href="@{'/users/page/' + ${currentPage + 1}}">Next Page</button>
+    </div>
+</div>
+</body>
+</html>
