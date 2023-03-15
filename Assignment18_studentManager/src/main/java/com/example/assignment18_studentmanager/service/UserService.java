@@ -2,6 +2,7 @@ package com.example.assignment18_studentmanager.service;
 
 import com.example.assignment18_studentmanager.model.dto.UserDTO;
 import com.example.assignment18_studentmanager.model.entity.User;
+import com.example.assignment18_studentmanager.security.Authority;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -14,7 +15,7 @@ public interface UserService {
 
     String createUser(UserDTO dto);
 
-    String updateUser(UserDTO dto);
+    String updateUser(UserDTO dto, Authority authority);
 
     String deleteUser(int id);
 }

@@ -2,6 +2,7 @@ package com.example.assignment18_studentmanager.control;
 
 import com.example.assignment18_studentmanager.model.dto.UserDTO;
 import com.example.assignment18_studentmanager.model.entity.User;
+import com.example.assignment18_studentmanager.security.Authority;
 import com.example.assignment18_studentmanager.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -38,8 +39,8 @@ public class UserController {
     }
 
     @PatchMapping("")
-    public ResponseEntity<String> update(@RequestBody UserDTO dto) {
-        return ResponseEntity.ok((userService.updateUser(dto)));
+    public ResponseEntity<String> update(@RequestBody UserDTO dto, @RequestBody Authority authority) {
+        return ResponseEntity.ok((userService.updateUser(dto,authority)));
     }
 
     @DeleteMapping("/delete/{id}")

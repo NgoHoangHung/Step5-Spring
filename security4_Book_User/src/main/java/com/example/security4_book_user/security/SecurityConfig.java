@@ -42,7 +42,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     public InMemoryUserDetailsManager inMemoryUserDetailsManager() {
         Authority authority = new Authority();
         User user1 = new User("read", "123");
-        user1.setAuthorities(Arrays.asList(authority.getAuthority("READ"), authority.getAuthority("CREATE")));
+        user1.setAuthorities(Arrays.asList(authority.getAuthority("READ"), authority.getAuthority("SEARCH")));
         User user2 = new User("create", "123");
         user2.setAuthorities(Arrays.asList(authority.getAuthority("CREATE")));
         User user3 = new User("delete", "123");
