@@ -15,7 +15,7 @@ table {
     border-collapse: collapse;
     width: 100%;
 }
-th, td {
+td,th{
     text-align: left;
     padding: 8px;
     border-bottom: 1px solid #ddd;
@@ -29,9 +29,7 @@ tr:hover {
     display: none;
 }
 
-tr:hover .show {
-    display: block;
-}
+
 tr:hover .show {
     display: block;
 }

@@ -31,7 +31,7 @@ public class CustomAuthenProvider implements AuthenticationProvider {
         /*
          * chứa thông tin về quá trình xác thực của người dùng, bao gồm thông tin về tên đăng nhập,
          *  mật khẩu, quyền truy cập và các thông tin xác thực khác
-         * đây là công cụ của spring nên ta ko cần quan tâm nó lấy thế nào mặc dù ta rất tò mò
+         * đây là công cụ của spring
          *
          * */
         String username = authentication.getName();
@@ -40,7 +40,7 @@ public class CustomAuthenProvider implements AuthenticationProvider {
         try {
             UserDetails userDetails = inMemoryUserDetailsManager.loadUserByUsername(username);
             /* phương thức loadUserByUsername tạo ra một đối tượng UserDetails chứ chưa làm gì cả.
-             nó bao gồm các thông tinre
+             nó bao gồm các thông tin
             * User(user.getUsername(), user.getPassword(), user.isEnabled(), user.isAccountNonExpired(),
 				user.isCredentialsNonExpired(), user.isAccountNonLocked(), user.getAuthorities());
             * */
@@ -48,10 +48,12 @@ public class CustomAuthenProvider implements AuthenticationProvider {
                 //nếu đúng thì trả về một authentication. nó được sử dụng trong suốt một phiên làm việc
                 /*UsernamePasswordAuthenticationToken(Object principal, Object credentials,
                         Collection<? extends GrantedAuthority > authorities)
-                        sau khi authenticantion được tạo ra thì ta sẽ không truyền trực tiếp nó vào trong configure(AuthenticationManagerBuilder auth)
+                        sau khi authenticantion được tạo ra thì ta sẽ không truyền trực tiếp nó vào trong
+                         configure(AuthenticationManagerBuilder auth)
                         mà ta sẽ truyền qua AuthenticvationProvider.
                          chúng ta sẽ sử dụng AuthenticationManager để xác thực các yêu cầu từ người dùng.
-                         AuthenticationManager được tạo ra bởi AuthenticationManagerBuilder và sẽ được sử dụng để xác thực các đối tượng Authentication
+                         AuthenticationManager được tạo ra bởi AuthenticationManagerBuilder và sẽ được
+                         sử dụng để xác thực các đối tượng Authentication
                          được truyền vào từ các yêu cầu từ người dùng.
                         */
                 return new UsernamePasswordAuthenticationToken(username, userDetails.getPassword(), userDetails.getAuthorities());

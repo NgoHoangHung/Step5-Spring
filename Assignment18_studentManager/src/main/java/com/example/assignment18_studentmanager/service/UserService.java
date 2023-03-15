@@ -12,9 +12,9 @@ public interface UserService {
 
     List<User> findAll();
 
-    String createUser(User dto);
+    String createUser(UserDTO dto);
 
-    String updateStudent(UserDTO dto);
+    String updateUser(UserDTO dto);
 
-    String deleteStudent(int id);
+    String deleteUser(int id);
 }

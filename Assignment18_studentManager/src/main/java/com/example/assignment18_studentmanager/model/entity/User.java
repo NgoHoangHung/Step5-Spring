@@ -20,8 +20,8 @@ public class User {
     private double score;
     private String phone;
 
-    @Enumerated(EnumType.STRING)
-    private Authority authority;
+//    @Enumerated(EnumType.STRING)
+//    private Authority authority;
     @ManyToOne
     @JoinColumn(name = "clasz_id")
     private Classz classz;

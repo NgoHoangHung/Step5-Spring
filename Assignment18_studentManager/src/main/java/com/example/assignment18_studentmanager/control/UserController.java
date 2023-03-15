@@ -19,8 +19,10 @@ public class UserController {
     private UserService userService;
 
     @GetMapping("/{id}")
-    public ResponseEntity<User> findClassById(@RequestParam int id) {
-        return ResponseEntity.ok(userService.findClassById(id));
+    public String findClassById(@PathVariable int id, Model model) {
+        User user = userService.findClassById(id);
+        model.addAttribute("user", user);
+        return "userdetail";
     }
 
     @GetMapping("/getall")
@@ -30,18 +32,18 @@ public class UserController {
         return "user.html";
     }
 
-//    @PostMapping("/new")
-//    public ResponseEntity<String> createStudent(@RequestBody UserDTO dto) {
-//        return ResponseEntity.ok(userService.createUser(dto));
-//    }
+    @PostMapping("/new")
+    public ResponseEntity<String> create(@RequestBody UserDTO dto) {
+        return ResponseEntity.ok(userService.createUser(dto));
+    }
 
-    @PutMapping("")
-    public ResponseEntity<String> updateStudent(@RequestBody UserDTO dto) {
-        return ResponseEntity.ok((userService.updateStudent(dto)));
+    @PatchMapping("")
+    public ResponseEntity<String> update(@RequestBody UserDTO dto) {
+        return ResponseEntity.ok((userService.updateUser(dto)));
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<String> deleteStudent(@RequestParam int id) {
-        return ResponseEntity.ok(userService.deleteStudent(id));
+    public ResponseEntity<String> delete(@PathVariable int id) {
+        return ResponseEntity.ok(userService.deleteUser(id));
     }
 }

@@ -1,4 +1,4 @@
-package com.example.assignment18_studentmanager.model.entity;
+package com.example.assignment18_studentmanager.security;
 
 public enum Authority {
     ADMIN,TEACHER,STUDENT,TELESALE,MEMBER;
