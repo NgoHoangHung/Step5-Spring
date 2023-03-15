@@ -23,16 +23,17 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     private UserRepository userRepository;
 
-    @Override
-    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth
-                .userDetailsService(inMemoryUserDetailsManager())
-                .passwordEncoder(NoOpPasswordEncoder.getInstance());
-    }
+//    @Override
+//    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+//        auth
+//                .userDetailsService(inMemoryUserDetailsManager())
+//                .passwordEncoder(NoOpPasswordEncoder.getInstance());
+//    }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
+                .csrf().disable()
                 .formLogin()
                 .and()
                 .authorizeRequests()
