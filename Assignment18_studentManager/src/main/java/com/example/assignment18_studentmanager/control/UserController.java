@@ -42,7 +42,7 @@ public class UserController {
         return ResponseEntity.ok((userService.updateUser(dto)));
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/delete/{id}")
     public ResponseEntity<String> delete(@PathVariable int id) {
         return ResponseEntity.ok(userService.deleteUser(id));
     }
