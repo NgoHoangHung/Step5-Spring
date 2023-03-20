@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create User</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        td {
+            padding: 10px;
+        }
+
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 5px;
+            border-radius: 3px;
+            border: 1px solid #ccc;
+        }
+
+        button[type="submit"] {
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0062cc;
+        }
+
+    </style>
+</head>
+<body>
+<h1>Create User</h1>
+<form id="createUserForm">
+    <table th:object="${user}">
+        <tr>
+            <td>Name:</td>
+            <td><input type="text" th:field="${user.name}" /></td>
+        </tr>
+        <tr>
+            <td>Phone:</td>
+            <td><input type="text" th:field="${userphone}" /></td>
+        </tr>
+        <tr>
+            <td>Email:</td>
+            <td><input type="text" th:field="${useremail}" /></td>
+        </tr>
+        <tr>
+            <td>Password:</td>
+            <td><input type="password" th:field="${userpassword}" /></td>
+        </tr>
+    </table>
+    <button type="submit" onclick="createUser()">Create User</button>
+</form>
+
+<script src="script.js"></script>
+</body>
+</html>
