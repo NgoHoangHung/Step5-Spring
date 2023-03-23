@@ -67,25 +67,27 @@
             background-color: #3e8e41;
         }
     </style>
+
 </head>
 <body>
 <div class="container">
     <div class="card">
         <h2>Registration Form</h2>
-        <form th:action="@{/register}" method="post">
+        <form id="register-form">
             <label for="username">Username</label>
             <input type="text" id="username" name="username" required>
 
             <label for="password">Password</label>
             <input type="password" id="password" name="password" required>
 
-            <label for="confirm-password">Confirm Password</label>
-            <input type="password" id="confirm-password" name="confirm-password" required>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
 
             <button type="submit">Finish</button>
             <button type="button" onclick="window.location.href='/'">Cancel</button>
         </form>
     </div>
 </div>
+    <script th:src="@{/assets/js/signup.js}"></script>
 </body>
 </html>

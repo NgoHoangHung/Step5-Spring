@@ -63,7 +63,7 @@
 <body>
 <div class="container">
   <div class="book animate__animated animate__fadeInUp" th:each="book : ${books}">
-    <img th:src="@{'/static/images/' + ${book.image}}" alt="Book Image">
+<!--    <img th:src="@{'/static/images/' + ${book.image}}" alt="Book Image">-->
     <h3 th:text="${book.name}"></h3>
     <p th:text="${book.author}"></p>
     <p th:text="'Price: $' + ${book.price}"></p>

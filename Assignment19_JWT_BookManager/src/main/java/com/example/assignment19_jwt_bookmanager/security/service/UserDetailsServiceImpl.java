@@ -16,18 +16,16 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         //Kiểm tra user có tồn tại trong database hay không
-        User user = userRepository.findByUsername(username);
-        if (user == null) {
-            throw new UsernameNotFoundException(username + "không tồn tại");
-        }
-        return new CustomUserDetails(user);
+        User user = userRepository.findByUsername(username)
+                .orElseThrow(()-> new UsernameNotFoundException(username + "không tồn tại"));
+        return UserDetailsImpl.build(user);
     }
 
-    public UserDetails loadUserById(int id) {
-        User user = userRepository.findById(id);
-        if (user == null) {
-            throw new UsernameNotFoundException("không tồn tại user với id:" +id );
-        }
-        return new CustomUserDetails(user);
-    }
+//    public UserDetails loadUserById(int id) {
+//        User user = userRepository.findById(id);
+//        if (user == null) {
+//            throw new UsernameNotFoundException("không tồn tại user với id:" +id );
+//        }
+//        return new UserDetailsImpl(user);
+//    }
 }

@@ -1,21 +1,44 @@
 package com.example.assignment19_jwt_bookmanager.model.entity;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.Set;
 
 @Entity
-@Table
+@Table(name = "roles")
 public class Role {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    int id;
-    @ManyToMany(mappedBy = "rollSet")
-    private Set<User> userSet;
+    private Integer id;
 
-    @JsonBackReference
-    @OneToMany(mappedBy = "role")
-    private Set<Authority> authorities;
+    @Enumerated(EnumType.STRING)
+    @Column(length = 20)
+    private ERole name;
+    public Role() {
+
+    }
+
+    public Role(ERole name) {
+        this.name = name;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public ERole getName() {
+        return name;
+    }
+
+    public void setName(ERole name) {
+        this.name = name;
+    }
 }
 
