@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -97,7 +97,44 @@
             text-align: center;
         }
 
+        nav {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .parent {
+            position: relative;
+
+        }
+
+        .child {
+            position: absolute;
+            background-color: #8bcba2;
+            display: none;
+        }
+
+        .child li {
+            width: 100%;
+            border-bottom: 2px solid #2f2020;
+            /*margin: 5px 20px;*/
+            padding: 5px 20px;
+
+            /*display: none;*/
+        }
+
+        .parent:hover .child {
+            display: block;
+        }
+
+        .child li:hover {
+            scale: 1.2;
+        }
+
+        .child li:last-child {
+            border-bottom: none;
+        }
     </style>
+
 </head>
 <body>
 <header>
@@ -106,13 +143,27 @@
 <nav>
     <ul>
         <li><a href="#">Home</a></li>
-        <li><a href="#">Books</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
+        <li class="parent"><a href="#">Books</a>
+            <ul class="child">
+                <li>Thêm</li>
+                <li>Xem</li>
+                <li>Sửa</li>
+                <li>Xóa</li>
+            </ul>
+
+        </li>
+        <li id="user">User</li>
+        <li><a href="#"></a></li>
+    </ul>
+    <ul>
+        <li><a th:href="@{/login}">Signin</a></li>
+        <li><a th:href="@{/signup}">SignUp</a></li>
+
     </ul>
 </nav>
 <main>
     <div class="container">
+
         <div class="book">
             <img src="https://via.placeholder.com/300x400" alt="Book cover">
             <h2>Book Title</h2>
@@ -133,6 +184,6 @@
         </div>
     </div>
 </main>
-
+<script th:src="@{/assets/js/acess-source.js}"></script>
 </body>
 </html>

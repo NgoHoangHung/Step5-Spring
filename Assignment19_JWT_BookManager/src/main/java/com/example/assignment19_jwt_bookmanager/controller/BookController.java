@@ -16,6 +16,10 @@ public class BookController {
     @Autowired
     BookRepository bookRepository;
     @GetMapping
+    public String home(){
+        return "index.html";
+    }
+    @GetMapping("/list")
     public String libManager(Model model){
         List<Book> bookList = bookRepository.findAll();
         model.addAttribute("books",bookList);

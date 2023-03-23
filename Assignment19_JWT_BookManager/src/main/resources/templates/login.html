@@ -2,108 +2,114 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 <head>
-  <meta charset="UTF-8">
-  <title>Login</title>
-<style>
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-    background: url(/assets/img/background.jpg) no-repeat;
-    background-size: cover;
-  }
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            background: url(/assets/img/background.jpg) no-repeat;
+            background-size: cover;
+        }
 
-  .container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 600px;
-    background-color: rgba(41, 86, 26, 0.5);
-    padding: 40px;
-    box-sizing: border-box;
-    border-radius: 10px;
-    box-shadow: 0 15px 25px rgb(167, 58, 239);
-  }
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            background-color: rgba(41, 86, 26, 0.5);
+            padding: 40px;
+            box-sizing: border-box;
+            border-radius: 10px;
+            box-shadow: 0 15px 25px rgb(167, 58, 239);
+        }
 
-  .container h1 {
-    margin: 0 0 20px;
-    padding: 0;
-    color: #fff;
-    text-align: center;
-  }
+        .container h1 {
+            margin: 0 0 20px;
+            padding: 0;
+            color: #fff;
+            text-align: center;
+        }
 
-  .container .input-group {
-    position: relative;
-    margin-bottom: 40px;
-  }
+        .container .input-group {
+            position: relative;
+            margin-bottom: 40px;
+        }
 
-  .container .input-group input {
-    width: 100%;
-    padding: 10px;
-    font-size: 18px;
-    color: #fff;
-    border: none;
-    border-bottom: 1px solid #fff;
-    background: transparent;
-    outline: none;
-  }
+        .container .input-group input {
+            width: 100%;
+            padding: 10px;
+            font-size: 18px;
+            color: #fff;
+            border: none;
+            border-bottom: 1px solid #fff;
+            background: transparent;
+            outline: none;
+        }
 
-  .container .input-group label {
-    position: absolute;
-    top: 10px;
-    left: 0;
-    padding: 10px;
-    font-size: 18px;
-    color: #fff;
-    pointer-events: none;
-    transition: .5s;
-  }
+        .container .input-group label {
+            position: absolute;
+            top: 10px;
+            left: 0;
+            padding: 10px;
+            font-size: 18px;
+            color: #fff;
+            pointer-events: none;
+            transition: .5s;
+        }
 
-  .container .input-group input:focus ~ label,
-  .container .input-group input:valid ~ label {
-    top: -20px;
-    left: 0;
-    color: #03a9f4;
-    font-size: 14px;
-  }
+        .container .input-group input:focus ~ label,
+        .container .input-group input:valid ~ label {
+            top: -20px;
+            left: 0;
+            color: #03a9f4;
+            font-size: 14px;
+        }
 
-  .container button {
-    width: 100%;
-    padding: 10px;
-    font-size: 18px;
-    font-weight: bold;
-    color: #fff;
-    background-color: #03a9f4;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    outline: none;
-    transition: .5s;
-  }
+        .container button {
+            width: 100%;
+            padding: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #03a9f4;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            outline: none;
+            transition: .5s;
+        }
 
-  .container button:hover {
-    background-color: #2196f3;
-  }
+        .container button:hover {
+            background-color: #2196f3;
+        }
 
-</style>
+    </style>
+
 </head>
 
 <body>
 <div class="container">
-  <h1>Login</h1>
-  <form>
-    <div class="input-group">
-      <input type="text" name="username" required="required"/>
-      <label>Username</label>
-    </div>
-    <div class="input-group">
-      <input type="password" name="password" required="required"/>
-      <label>Password</label>
-    </div>
-    <button type="submit">Login</button>
-  </form>
+    <h1>Login</h1>
+    <form id="login-form">
+        <div class="input-group ">
+            <div class="username">
+                <input id="username" type="text" name="username" required="required"/>
+                <label>Username</label>
+            </div>
+        </div>
+        <div class="input-group ">
+            <div class="password">
+                <input id="password" type="password" name="password" required="required"/>
+                <label>Password</label>
+            </div>
+        </div>
+        <button type="submit">Login</button>
+    </form>
 </div>
+<script th:src="@{/assets/js/login.js}"></script>
 </body>
 
 </html>
