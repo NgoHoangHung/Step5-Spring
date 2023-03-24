@@ -1,0 +1,102 @@
+1,@EnableWebSecurity;
+   là một annotation trong Spring Security framework,
+   nó được sử dụng để bật tính năng bảo mật web trên ứng dụng Spring.
+   Khi chúng ta sử dụng @EnableWebSecurity,
+   chúng ta có thể định nghĩa cấu hình bảo mật trên lớp WebSecurityConfigurerAdapter,
+   để quản lý quyền truy cập và xác thực người dùng đối với các tài nguyên trên ứng dụng web.
+
+2, tìm hiểu về lớp WebSecurityConfigurerAdapter.
+đây là một abtract class dùng trong việc thiết thiết lập cấu hình cũng như cơ chế bảo mật.
+Khi kế thừa lớp WebSecurityConfigurerAdapter trong Spring Security,
+ta có thể cấu hình các chức năng bảo vệ trong ứng dụng web, bao gồm:
+
+    a, Thiết lập quyền truy cập: sử dụng phương thức configure(HttpSecurity http) để
+     xác định các quyền truy cập của người dùng tới các tài nguyên của ứng dụng web.
+
+    b, Thiết lập đăng nhập: sử dụng phương thức configure(HttpSecurity http) để
+    cấu hình xác thực đăng nhập, bao gồm hình thức xác thực như HTTP Basic hoặc Form Login.
+
+    c, Thiết lập phân quyền: sử dụng phương thức configure(AuthenticationManagerBuilder auth) để
+    thiết lập các thông tin về người dùng và phân quyền.
+
+    d, Thiết lập mã hóa mật khẩu: sử dụng phương thức configure(AuthenticationManagerBuilder auth) để
+    xác định cách mã hóa mật khẩu của người dùng.
+
+    e, Thiết lập xác thực nhiều yếu tố (multi-factor authentication):
+    sử dụng phương thức configure(HttpSecurity http) để cấu hình các yếu tố xác thực như mã OTP (One-Time Password).
+
+    f, Thiết lập logout: sử dụng phương thức configure(HttpSecurity http) để cấu hình đăng xuất người dùng
+    khỏi ứng dụng web.
+
+    g, Thiết lập các cấu hình khác: sử dụng các phương thức khác của lớp WebSecurityConfigurerAdapter
+    để thiết lập các cấu hình khác như mở rộng các cấu hình mặc định của Spring Security,
+    cấu hình truy cập tài nguyên tĩnh, ...
+
+Dưới đây là một số tính chất nổi bật của lớp WebSecurityConfigurerAdapter:
+
+    a, Cho phép ta override các phương thức của lớp này để cấu hình bảo mật cho ứng dụng web của mình.
+    b, Cung cấp cho ta các cấu hình mặc định cho các phương thức bảo mật như HttpBasic,
+    Form Login, Remember Me, CSRF, Logout và đăng ký UserDetailsService.
+    c,Cho phép ta sử dụng các annotation như @EnableWebSecurity, @EnableGlobalMethodSecurity,
+    @Order và @Configuration trên lớp của mình để cấu hình bảo mật cho ứng dụng web.
+    d, Tự động cấu hình Spring Security filter chain trên ứng dụng web của ta.
+    e, Cho phép ta sử dụng Spring Security OAuth2, SAML2 và LDAP để
+    xác thực người dùng trong ứng dụng web của mình.
+
+3,lớp UserDetailsService trong security của spring boot
+    Lớp UserDetailsService được sử dụng trong Spring Security để xác thực người dùng.
+    Khi một người dùng cố gắng đăng nhập vào ứng dụng của bạn,
+    thông tin đăng nhập sẽ được chuyển đến UserDetailsService để kiểm tra xem người dùng có tồn tại hay không.
+    Lớp UserDetailsService đóng vai trò cung cấp thông tin người dùng cho Spring Security
+    Nó được sử dụng để lấy thông tin người dùng từ cơ sở dữ liệu hoặc bất kỳ nguồn dữ liệu nào khác.
+    Nó cung cấp một phương thức loadUserByUsername()để trả về một đối tượng UserDetails
+    cho người dùng tương ứng với tên đăng nhập được cung cấp.
+    Đối tượng UserDetails chứa thông tin về người dùng như
+    tên đăng nhập,mật khẩu, quyền truy cập và các thông tin khác.
+    Nó được sử dụng bởi Spring Security để thực hiện xác thực và kiểm tra phân quyền người dùng
+    khi họ cố gắng truy cập vào các tài nguyên được bảo vệ.
+
+var user1 = User.withUsername("hungnh").password("123").authorities("read").build();
+   Dòng code này sử dụng để tạo ra một đối tượng User trong Spring Security.
+   Cụ thể, nó sử dụng method tĩnh withUsername() để thiết lập tên đăng nhập cho người dùng (hungnh),
+   sử dụng method password() để thiết lập mật khẩu cho người dùng (123),
+   và sử dụng method authorities() để thiết lập các quyền (read).
+
+    Sau khi thiết lập các thuộc tính của đối tượng User,
+    method build() được sử dụng để trả về một đối tượng User đã được tạo.
+    Đối tượng User này có thể được sử dụng để xác thực và phân quyền trong ứng dụng Spring Security.
+
+4,tìm hiểu về builder partern
+    Builder Pattern là một kiểu thiết kế phần mềm cho phép tạo ra một đối tượng phức tạp
+    bằng cách sử dụng một chuỗi các hàm setter và method chaining để thiết lập các thuộc tính của đối tượng.
+    Khi tạo ra một đối tượng bằng Builder Pattern, bạn có thể chỉ định một vài thuộc tính bắt buộc
+    và bỏ qua những thuộc tính khác, trong khi vẫn đảm bảo tính chính xác và đầy đủ của đối tượng.
+    Điều này giúp cho việc tạo đối tượng trở nên dễ dàng hơn và giảm thiểu khả năng mắc phải lỗi khi tạo đối tượng.
+
+
+5,Đoạn mã return new InMemoryUserDetailsManager(user1, user2);
+    có ý nghĩa là tạo ra một đối tượng InMemoryUserDetailsManager với danh sách các người dùng
+    được cung cấp trong đối số.
+
+    InMemoryUserDetailsManager là một lớp cung cấp các phương thức để quản lý danh sách người dùng
+    trong bộ nhớ của ứng dụng. Trong đoạn mã này, các người dùng user1 và user2 được cung cấp cho đối tượng
+    InMemoryUserDetailsManager để quản lý và xác thực trong ứng dụng.
+    Khi phương thức được gọi, đối tượng InMemoryUserDetailsManager sẽ trả về danh sách các người dùng đã
+    được cấu hình.
+
+6, Lớp PasswordEncoder trong Spring Security là một interface,
+    được sử dụng để mã hóa mật khẩu người dùng.
+    Nó được sử dụng để đảm bảo rằng các mật khẩu được lưu trữ trong cơ sở dữ liệu của ứng dụng được mã hóa
+    để đảm bảo tính bảo mật.
+    Spring Security cung cấp một số lớp implementation của PasswordEncoder interface như sau:
+
+    a, BCryptPasswordEncoder: mã hóa mật khẩu sử dụng thuật toán BCrypt
+    b, NoOpPasswordEncoder: không mã hóa mật khẩu, được sử dụng cho mục đích kiểm tra và xác thực mật khẩu trong quá
+    trình phát triển ứng dụng
+    c, Pbkdf2PasswordEncoder: mã hóa mật khẩu sử dụng thuật toán PBKDF2
+    d, SCryptPasswordEncoder: mã hóa mật khẩu sử dụng thuật toán SCrypt
+    PasswordEncoder có tính chất giúp ứng dụng xác định được cách mã hóa và giải mã mật khẩu của người dùng.
+    Việc sử dụng một mã hóa mật khẩu mạnh sẽ giúp tăng tính bảo mật cho ứng dụng của bạn.
+    Khi người dùng đăng nhập, mật khẩu của họ sẽ được mã hóa và so sánh với mật khẩu đã được mã hóa
+    trong cơ sở dữ liệu.
+    Nếu hai giá trị tương đương nhau, người dùng sẽ được cho phép truy cập vào ứng dụng.

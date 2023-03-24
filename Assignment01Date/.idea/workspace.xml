@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6fbcaa80-cd74-459c-adc3-6519c07fef74" name="Changes" comment="update bai 1">
+      <change beforePath="$PROJECT_DIR$/../Assgnement1Techmaster/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assgnement1Techmaster/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assgnement1Techmaster/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assgnement1Techmaster/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assgnement1Techmaster/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assgnement1Techmaster/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assgnement1Techmaster/src/main/java/com/example/assgnement1techmaster/Assgnement1TechmasterApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assgnement1Techmaster/src/main/java/com/example/assgnement1techmaster/ServletInitializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assgnement1Techmaster/src/main/java/com/example/assgnement1techmaster/controller/ClaszController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assgnement1Techmaster/src/main/java/com/example/assgnement1techmaster/controller/StudentController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assgnement1Techmaster/src/main/java/com/example/assgnement1techmaster/model/dto/ClaszDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assgnement1Techmaster/src/main/java/com/example/assgnement1techmaster/model/dto/StudentDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assgnement1Techmaster/src/main/java/com/example/assgnement1techmaster/model/entity/Clasz.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assgnement1Techmaster/src/main/java/com/example/assgnement1techmaster/model/entity/Student.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assgnement1Techmaster/src/main/java/com/example/assgnement1techmaster/repository/ClaszRepositpory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assgnement1Techmaster/src/main/java/com/example/assgnement1techmaster/repository/StudentRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assgnement1Techmaster/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assgnement1Techmaster/src/test/java/com/example/assgnement1techmaster/Assgnement1TechmasterApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignement4JPA_Course_Teacher/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignement4JPA_Course_Teacher/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignement4JPA_Course_Teacher/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignement4JPA_Course_Teacher/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignement4JPA_Course_Teacher/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignement4JPA_Course_Teacher/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignement4JPA_Course_Teacher/src/main/java/com/example/assignement4jpa_course_teacher/Assignement4JpaCourseTeacherApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignement4JPA_Course_Teacher/src/main/java/com/example/assignement4jpa_course_teacher/ServletInitializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignement4JPA_Course_Teacher/src/main/java/com/example/assignement4jpa_course_teacher/controller/CourseController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignement4JPA_Course_Teacher/src/main/java/com/example/assignement4jpa_course_teacher/controller/StudentController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignement4JPA_Course_Teacher/src/main/java/com/example/assignement4jpa_course_teacher/controller/TeacherController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignement4JPA_Course_Teacher/src/main/java/com/example/assignement4jpa_course_teacher/model/dto/CourseDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignement4JPA_Course_Teacher/src/main/java/com/example/assignement4jpa_course_teacher/model/dto/StudentDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignement4JPA_Course_Teacher/src/main/java/com/example/assignement4jpa_course_teacher/model/dto/TeacherDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignement4JPA_Course_Teacher/src/main/java/com/example/assignement4jpa_course_teacher/model/entity/Course.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignement4JPA_Course_Teacher/src/main/java/com/example/assignement4jpa_course_teacher/model/entity/Status.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignement4JPA_Course_Teacher/src/main/java/com/example/assignement4jpa_course_teacher/model/entity/Student.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignement4JPA_Course_Teacher/src/main/java/com/example/assignement4jpa_course_teacher/model/entity/Teacher.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignement4JPA_Course_Teacher/src/main/java/com/example/assignement4jpa_course_teacher/model/map/converseToCourseDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignement4JPA_Course_Teacher/src/main/java/com/example/assignement4jpa_course_teacher/repository/CourseRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignement4JPA_Course_Teacher/src/main/java/com/example/assignement4jpa_course_teacher/repository/StudentRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignement4JPA_Course_Teacher/src/main/java/com/example/assignement4jpa_course_teacher/repository/TeacherRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignement4JPA_Course_Teacher/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignement4JPA_Course_Teacher/src/test/java/com/example/assignement4jpa_course_teacher/Assignement4JpaCourseTeacherApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/assignment01date/Assignment01DateApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/assignment01date/ServletInitializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/assignment01date/controller/level1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/assignment01date/model/RequestBodyModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/assignment01date/Assignment01DateApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment19_JWT_BookManager.rar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment19_JWT_BookManager/src/main/resources/templates/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignment19_JWT_BookManager/src/main/resources/templates/signup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment4JPA_ShopManage/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment4JPA_ShopManage/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment4JPA_ShopManage/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment4JPA_ShopManage/bash.classpath" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment4JPA_ShopManage/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment4JPA_ShopManage/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment4JPA_ShopManage/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment4JPA_ShopManage/src/main/java/com/example/assignment4jpa_shopmanage/Assignment4JpaShopManageApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment4JPA_ShopManage/src/main/java/com/example/assignment4jpa_shopmanage/ServletInitializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment4JPA_ShopManage/src/main/java/com/example/assignment4jpa_shopmanage/controller/CustomerController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment4JPA_ShopManage/src/main/java/com/example/assignment4jpa_shopmanage/controller/OrderController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment4JPA_ShopManage/src/main/java/com/example/assignment4jpa_shopmanage/controller/ProductController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment4JPA_ShopManage/src/main/java/com/example/assignment4jpa_shopmanage/controller/ShopController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment4JPA_ShopManage/src/main/java/com/example/assignment4jpa_shopmanage/model/dto/CustomerDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment4JPA_ShopManage/src/main/java/com/example/assignment4jpa_shopmanage/model/dto/OrderDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment4JPA_ShopManage/src/main/java/com/example/assignment4jpa_shopmanage/model/dto/ProductDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment4JPA_ShopManage/src/main/java/com/example/assignment4jpa_shopmanage/model/dto/ShopDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment4JPA_ShopManage/src/main/java/com/example/assignment4jpa_shopmanage/model/dto/WalletDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment4JPA_ShopManage/src/main/java/com/example/assignment4jpa_shopmanage/model/entity/Customer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment4JPA_ShopManage/src/main/java/com/example/assignment4jpa_shopmanage/model/entity/Order.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment4JPA_ShopManage/src/main/java/com/example/assignment4jpa_shopmanage/model/entity/OrderedProduct.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment4JPA_ShopManage/src/main/java/com/example/assignment4jpa_shopmanage/model/entity/Product.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment4JPA_ShopManage/src/main/java/com/example/assignment4jpa_shopmanage/model/entity/Shop.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment4JPA_ShopManage/src/main/java/com/example/assignment4jpa_shopmanage/model/entity/Wallet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment4JPA_ShopManage/src/main/java/com/example/assignment4jpa_shopmanage/model/map/ToWalletDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment4JPA_ShopManage/src/main/java/com/example/assignment4jpa_shopmanage/repository/CustomerRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment4JPA_ShopManage/src/main/java/com/example/assignment4jpa_shopmanage/repository/OrderRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment4JPA_ShopManage/src/main/java/com/example/assignment4jpa_shopmanage/repository/ProductRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment4JPA_ShopManage/src/main/java/com/example/assignment4jpa_shopmanage/repository/ShopRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment4JPA_ShopManage/src/main/java/com/example/assignment4jpa_shopmanage/repository/WalletRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment4JPA_ShopManage/src/main/java/com/example/assignment4jpa_shopmanage/service/OrderService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment4JPA_ShopManage/src/main/java/com/example/assignment4jpa_shopmanage/service/OrderServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment4JPA_ShopManage/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment4JPA_ShopManage/src/main/resources/templates/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment4JPA_ShopManage/src/test/java/com/example/assignment4jpa_shopmanage/Assignment4JpaShopManageApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment6CarService/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment6CarService/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment6CarService/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment6CarService/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment6CarService/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment6CarService/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment6CarService/src/main/java/com/example/assignment6carservice/Assignment6CarServiceApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment6CarService/src/main/java/com/example/assignment6carservice/ServletInitializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment6CarService/src/main/java/com/example/assignment6carservice/controller/CustomerController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment6CarService/src/main/java/com/example/assignment6carservice/controller/OrderrController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment6CarService/src/main/java/com/example/assignment6carservice/controller/ProductController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment6CarService/src/main/java/com/example/assignment6carservice/controller/ServiceController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment6CarService/src/main/java/com/example/assignment6carservice/controller/StaffController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment6CarService/src/main/java/com/example/assignment6carservice/controller/WalletController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment6CarService/src/main/java/com/example/assignment6carservice/exception/CustomHandleException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment6CarService/src/main/java/com/example/assignment6carservice/exception/ExceptionResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment6CarService/src/main/java/com/example/assignment6carservice/exception/NotFoundExcepton.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment6CarService/src/main/java/com/example/assignment6carservice/model/dto/CustomerDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment6CarService/src/main/java/com/example/assignment6carservice/model/dto/OrderrDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment6CarService/src/main/java/com/example/assignment6carservice/model/dto/ProductDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment6CarService/src/main/java/com/example/assignment6carservice/model/dto/ServiceDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment6CarService/src/main/java/com/example/assignment6carservice/model/dto/StaffDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment6CarService/src/main/java/com/example/assignment6carservice/model/dto/WalletDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment6CarService/src/main/java/com/example/assignment6carservice/model/entity/Customer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment6CarService/src/main/java/com/example/assignment6carservice/model/entity/Orderr.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment6CarService/src/main/java/com/example/assignment6carservice/model/entity/Product.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment6CarService/src/main/java/com/example/assignment6carservice/model/entity/Service.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment6CarService/src/main/java/com/example/assignment6carservice/model/entity/Staff.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment6CarService/src/main/java/com/example/assignment6carservice/model/entity/Wallet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment6CarService/src/main/java/com/example/assignment6carservice/repository/CustomerRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment6CarService/src/main/java/com/example/assignment6carservice/repository/OrderrRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment6CarService/src/main/java/com/example/assignment6carservice/repository/ProductRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment6CarService/src/main/java/com/example/assignment6carservice/repository/ServiceRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment6CarService/src/main/java/com/example/assignment6carservice/repository/StaffRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment6CarService/src/main/java/com/example/assignment6carservice/repository/WalletRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment6CarService/src/main/java/com/example/assignment6carservice/service/CustomerService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment6CarService/src/main/java/com/example/assignment6carservice/service/CustomerServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment6CarService/src/main/java/com/example/assignment6carservice/service/OrderrService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment6CarService/src/main/java/com/example/assignment6carservice/service/OrderrServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment6CarService/src/main/java/com/example/assignment6carservice/service/ProductService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment6CarService/src/main/java/com/example/assignment6carservice/service/ProductServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment6CarService/src/main/java/com/example/assignment6carservice/service/ServiceService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment6CarService/src/main/java/com/example/assignment6carservice/service/ServiceServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment6CarService/src/main/java/com/example/assignment6carservice/service/StaffService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment6CarService/src/main/java/com/example/assignment6carservice/service/StaffServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment6CarService/src/main/java/com/example/assignment6carservice/service/WalletService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment6CarService/src/main/java/com/example/assignment6carservice/service/WalletServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment6CarService/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment6CarService/src/main/resources/templates/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment6CarService/src/test/java/com/example/assignment6carservice/Assignment6CarServiceApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment6StudentManager/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment6StudentManager/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment6StudentManager/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment6StudentManager/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment6StudentManager/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment6StudentManager/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment6StudentManager/src/main/java/com/example/assignment6studentmanager/Assignment6StudentManagerApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment6StudentManager/src/main/java/com/example/assignment6studentmanager/ServletInitializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment6StudentManager/src/main/java/com/example/assignment6studentmanager/controller/ClassController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment6StudentManager/src/main/java/com/example/assignment6studentmanager/controller/LectureController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment6StudentManager/src/main/java/com/example/assignment6studentmanager/controller/StudentController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment6StudentManager/src/main/java/com/example/assignment6studentmanager/controller/SubjectController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment6StudentManager/src/main/java/com/example/assignment6studentmanager/model/dto/ClasszDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment6StudentManager/src/main/java/com/example/assignment6studentmanager/model/dto/LectureDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment6StudentManager/src/main/java/com/example/assignment6studentmanager/model/dto/StudentDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment6StudentManager/src/main/java/com/example/assignment6studentmanager/model/dto/SubjectDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment6StudentManager/src/main/java/com/example/assignment6studentmanager/model/entity/Classz.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment6StudentManager/src/main/java/com/example/assignment6studentmanager/model/entity/Lecture.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment6StudentManager/src/main/java/com/example/assignment6studentmanager/model/entity/Student.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment6StudentManager/src/main/java/com/example/assignment6studentmanager/model/entity/Subject.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment6StudentManager/src/main/java/com/example/assignment6studentmanager/repository/ClasszRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment6StudentManager/src/main/java/com/example/assignment6studentmanager/repository/LectureRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment6StudentManager/src/main/java/com/example/assignment6studentmanager/repository/StudentRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment6StudentManager/src/main/java/com/example/assignment6studentmanager/repository/SubjectRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment6StudentManager/src/main/java/com/example/assignment6studentmanager/service/ClasszService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment6StudentManager/src/main/java/com/example/assignment6studentmanager/service/ClasszServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment6StudentManager/src/main/java/com/example/assignment6studentmanager/service/LectureService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment6StudentManager/src/main/java/com/example/assignment6studentmanager/service/LectureServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment6StudentManager/src/main/java/com/example/assignment6studentmanager/service/StudentService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment6StudentManager/src/main/java/com/example/assignment6studentmanager/service/StudentServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment6StudentManager/src/main/java/com/example/assignment6studentmanager/service/SubjectService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment6StudentManager/src/main/java/com/example/assignment6studentmanager/service/SubjectServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment6StudentManager/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment6StudentManager/src/test/java/com/example/assignment6studentmanager/Assignment6StudentManagerApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DigitalWallet/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DigitalWallet/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DigitalWallet/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DigitalWallet/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DigitalWallet/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DigitalWallet/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DigitalWallet/src/main/java/com/example/digitalwallet/DigitalWalletApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DigitalWallet/src/main/java/com/example/digitalwallet/ServletInitializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DigitalWallet/src/main/java/com/example/digitalwallet/controller/AccountController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DigitalWallet/src/main/java/com/example/digitalwallet/controller/WalletController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DigitalWallet/src/main/java/com/example/digitalwallet/model/dto/AcountDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DigitalWallet/src/main/java/com/example/digitalwallet/model/entity/Account.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DigitalWallet/src/main/java/com/example/digitalwallet/model/entity/Wallet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DigitalWallet/src/main/java/com/example/digitalwallet/repository/AccountRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DigitalWallet/src/main/java/com/example/digitalwallet/repository/WalletRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DigitalWallet/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DigitalWallet/src/test/java/com/example/digitalwallet/DigitalWalletApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../assignmen_security1/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../assignmen_security1/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../assignmen_security1/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../assignmen_security1/READ.me" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../assignmen_security1/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../assignmen_security1/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../assignmen_security1/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../assignmen_security1/src/main/java/techmaster/assignmen_security/AssignmenSecurityApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../assignmen_security1/src/main/java/techmaster/assignmen_security/ServletInitializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../assignmen_security1/src/main/java/techmaster/assignmen_security/controller/APIController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../assignmen_security1/src/main/java/techmaster/assignmen_security/model/Product.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../assignmen_security1/src/main/java/techmaster/assignmen_security/security/SecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../assignmen_security1/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../assignmen_security1/src/test/java/techmaster/assignmen_security/AssignmenSecurityApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../assignmentSecurity2/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../assignmentSecurity2/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../assignmentSecurity2/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../assignmentSecurity2/READ.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../assignmentSecurity2/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../assignmentSecurity2/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../assignmentSecurity2/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../assignmentSecurity2/src/main/java/com/example/assignmentsecurity/AssignmentSecurityApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../assignmentSecurity2/src/main/java/com/example/assignmentsecurity/ServletInitializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../assignmentSecurity2/src/main/java/com/example/assignmentsecurity/controller/ProductController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../assignmentSecurity2/src/main/java/com/example/assignmentsecurity/exception/AkioException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../assignmentSecurity2/src/main/java/com/example/assignmentsecurity/exception/AkioExceptionResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../assignmentSecurity2/src/main/java/com/example/assignmentsecurity/exception/CustomHandleException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../assignmentSecurity2/src/main/java/com/example/assignmentsecurity/model/Product.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../assignmentSecurity2/src/main/java/com/example/assignmentsecurity/repository/ProductRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../assignmentSecurity2/src/main/java/com/example/assignmentsecurity/service/SecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../assignmentSecurity2/src/main/java/com/example/assignmentsecurity/service/SecurityConfig2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../assignmentSecurity2/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../assignmentSecurity2/src/main/resources/static/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../assignmentSecurity2/src/main/resources/static/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../assignmentSecurity2/src/main/resources/templates/403.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../assignmentSecurity2/src/main/resources/templates/405.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../assignmentSecurity2/src/main/resources/templates/500.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../assignmentSecurity2/src/main/resources/templates/error.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../assignmentSecurity2/src/main/resources/templates/forbidenerror.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../assignmentSecurity2/src/main/resources/templates/img" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../assignmentSecurity2/src/main/resources/templates/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../assignmentSecurity2/src/main/resources/templates/kanji.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../assignmentSecurity2/src/main/resources/templates/logincustom.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../assignmentSecurity2/src/test/java/com/example/assignmentsecurity/AssignmentSecurityApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frondend/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frondend/.idea/frondend.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frondend/.idea/jpa-buddy.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frondend/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frondend/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frondend/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frondend/assets/img/CV picture.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frondend/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frondend/lib/bootstrap-5.0.2-dist/bootstrap/css/bootstrap-grid.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frondend/lib/bootstrap-5.0.2-dist/bootstrap/css/bootstrap-grid.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frondend/lib/bootstrap-5.0.2-dist/bootstrap/css/bootstrap-grid.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frondend/lib/bootstrap-5.0.2-dist/bootstrap/css/bootstrap-grid.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frondend/lib/bootstrap-5.0.2-dist/bootstrap/css/bootstrap-grid.rtl.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frondend/lib/bootstrap-5.0.2-dist/bootstrap/css/bootstrap-grid.rtl.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frondend/lib/bootstrap-5.0.2-dist/bootstrap/css/bootstrap-grid.rtl.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frondend/lib/bootstrap-5.0.2-dist/bootstrap/css/bootstrap-grid.rtl.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frondend/lib/bootstrap-5.0.2-dist/bootstrap/css/bootstrap-reboot.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frondend/lib/bootstrap-5.0.2-dist/bootstrap/css/bootstrap-reboot.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frondend/lib/bootstrap-5.0.2-dist/bootstrap/css/bootstrap-reboot.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frondend/lib/bootstrap-5.0.2-dist/bootstrap/css/bootstrap-reboot.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frondend/lib/bootstrap-5.0.2-dist/bootstrap/css/bootstrap-reboot.rtl.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frondend/lib/bootstrap-5.0.2-dist/bootstrap/css/bootstrap-reboot.rtl.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frondend/lib/bootstrap-5.0.2-dist/bootstrap/css/bootstrap-reboot.rtl.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frondend/lib/bootstrap-5.0.2-dist/bootstrap/css/bootstrap-reboot.rtl.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frondend/lib/bootstrap-5.0.2-dist/bootstrap/css/bootstrap-utilities.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frondend/lib/bootstrap-5.0.2-dist/bootstrap/css/bootstrap-utilities.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frondend/lib/bootstrap-5.0.2-dist/bootstrap/css/bootstrap-utilities.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frondend/lib/bootstrap-5.0.2-dist/bootstrap/css/bootstrap-utilities.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frondend/lib/bootstrap-5.0.2-dist/bootstrap/css/bootstrap-utilities.rtl.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frondend/lib/bootstrap-5.0.2-dist/bootstrap/css/bootstrap-utilities.rtl.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frondend/lib/bootstrap-5.0.2-dist/bootstrap/css/bootstrap-utilities.rtl.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frondend/lib/bootstrap-5.0.2-dist/bootstrap/css/bootstrap-utilities.rtl.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frondend/lib/bootstrap-5.0.2-dist/bootstrap/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frondend/lib/bootstrap-5.0.2-dist/bootstrap/css/bootstrap.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frondend/lib/bootstrap-5.0.2-dist/bootstrap/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frondend/lib/bootstrap-5.0.2-dist/bootstrap/css/bootstrap.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frondend/lib/bootstrap-5.0.2-dist/bootstrap/css/bootstrap.rtl.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frondend/lib/bootstrap-5.0.2-dist/bootstrap/css/bootstrap.rtl.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frondend/lib/bootstrap-5.0.2-dist/bootstrap/css/bootstrap.rtl.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frondend/lib/bootstrap-5.0.2-dist/bootstrap/css/bootstrap.rtl.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frondend/lib/bootstrap-5.0.2-dist/bootstrap/js/bootstrap.bundle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frondend/lib/bootstrap-5.0.2-dist/bootstrap/js/bootstrap.bundle.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frondend/lib/bootstrap-5.0.2-dist/bootstrap/js/bootstrap.bundle.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frondend/lib/bootstrap-5.0.2-dist/bootstrap/js/bootstrap.bundle.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frondend/lib/bootstrap-5.0.2-dist/bootstrap/js/bootstrap.esm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frondend/lib/bootstrap-5.0.2-dist/bootstrap/js/bootstrap.esm.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frondend/lib/bootstrap-5.0.2-dist/bootstrap/js/bootstrap.esm.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frondend/lib/bootstrap-5.0.2-dist/bootstrap/js/bootstrap.esm.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frondend/lib/bootstrap-5.0.2-dist/bootstrap/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frondend/lib/bootstrap-5.0.2-dist/bootstrap/js/bootstrap.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frondend/lib/bootstrap-5.0.2-dist/bootstrap/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frondend/lib/bootstrap-5.0.2-dist/bootstrap/js/bootstrap.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frondend/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kt_jpa_bug/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kt_jpa_bug/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kt_jpa_bug/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kt_jpa_bug/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kt_jpa_bug/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kt_jpa_bug/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kt_jpa_bug/src/main/java/com/example/kt_jpa/KtJpaApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kt_jpa_bug/src/main/java/com/example/kt_jpa/ServletInitializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kt_jpa_bug/src/main/java/com/example/kt_jpa/controller/OrderController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kt_jpa_bug/src/main/java/com/example/kt_jpa/controller/VoteController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kt_jpa_bug/src/main/java/com/example/kt_jpa/model/dto/CustomerDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kt_jpa_bug/src/main/java/com/example/kt_jpa/model/dto/OrderrDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kt_jpa_bug/src/main/java/com/example/kt_jpa/model/dto/ProductDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kt_jpa_bug/src/main/java/com/example/kt_jpa/model/dto/ShiperDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kt_jpa_bug/src/main/java/com/example/kt_jpa/model/dto/VoteDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kt_jpa_bug/src/main/java/com/example/kt_jpa/model/dto/WalletDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kt_jpa_bug/src/main/java/com/example/kt_jpa/model/entities/Customer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kt_jpa_bug/src/main/java/com/example/kt_jpa/model/entities/Orderr.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kt_jpa_bug/src/main/java/com/example/kt_jpa/model/entities/Product.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kt_jpa_bug/src/main/java/com/example/kt_jpa/model/entities/Shiper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kt_jpa_bug/src/main/java/com/example/kt_jpa/model/entities/Vote.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kt_jpa_bug/src/main/java/com/example/kt_jpa/model/entities/Wallet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kt_jpa_bug/src/main/java/com/example/kt_jpa/repository/CustomerRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kt_jpa_bug/src/main/java/com/example/kt_jpa/repository/OrderrRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kt_jpa_bug/src/main/java/com/example/kt_jpa/repository/ProductRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kt_jpa_bug/src/main/java/com/example/kt_jpa/repository/ShipperRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kt_jpa_bug/src/main/java/com/example/kt_jpa/repository/VoteRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kt_jpa_bug/src/main/java/com/example/kt_jpa/repository/WalletRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kt_jpa_bug/src/main/java/com/example/kt_jpa/service/OrderrService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kt_jpa_bug/src/main/java/com/example/kt_jpa/service/OrderrServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kt_jpa_bug/src/main/java/com/example/kt_jpa/service/ShipperService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kt_jpa_bug/src/main/java/com/example/kt_jpa/service/ShipperServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kt_jpa_bug/src/main/java/com/example/kt_jpa/service/VoteService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kt_jpa_bug/src/main/java/com/example/kt_jpa/service/VoteServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kt_jpa_bug/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kt_jpa_bug/src/test/java/com/example/kt_jpa/KtJpaApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security3Provider/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security3Provider/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security3Provider/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security3Provider/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security3Provider/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security3Provider/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security3Provider/src/main/java/com/example/demo1/Demo1Application.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security3Provider/src/main/java/com/example/demo1/ServletInitializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security3Provider/src/main/java/com/example/demo1/controller/ApiController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security3Provider/src/main/java/com/example/demo1/model/Product.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security3Provider/src/main/java/com/example/demo1/security/CustomAuthenProvider.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security3Provider/src/main/java/com/example/demo1/security/Role.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security3Provider/src/main/java/com/example/demo1/security/SecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security3Provider/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security3Provider/src/main/resources/templates/error/401.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security3Provider/src/main/resources/templates/error/403.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security3Provider/src/main/resources/templates/error/404.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security3Provider/src/main/resources/templates/error/500.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security3Provider/src/main/resources/templates/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security3Provider/src/test/java/com/example/demo1/Demo1ApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security4_Book_User/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security4_Book_User/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security4_Book_User/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security4_Book_User/Book.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security4_Book_User/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security4_Book_User/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security4_Book_User/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security4_Book_User/src/main/java/com/example/security4_book_user/Security4BookUserApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security4_Book_User/src/main/java/com/example/security4_book_user/ServletInitializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security4_Book_User/src/main/java/com/example/security4_book_user/config/RepositoryConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security4_Book_User/src/main/java/com/example/security4_book_user/controller/ApiController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security4_Book_User/src/main/java/com/example/security4_book_user/model/Book.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security4_Book_User/src/main/java/com/example/security4_book_user/model/Search.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security4_Book_User/src/main/java/com/example/security4_book_user/model/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security4_Book_User/src/main/java/com/example/security4_book_user/security/Authority.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security4_Book_User/src/main/java/com/example/security4_book_user/security/CustomAuthenProvider.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security4_Book_User/src/main/java/com/example/security4_book_user/security/SecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security4_Book_User/src/main/java/com/example/security4_book_user/security/WebConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security4_Book_User/src/main/java/com/example/security4_book_user/service/BookDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security4_Book_User/src/main/java/com/example/security4_book_user/service/Dao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security4_Book_User/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security4_Book_User/src/main/resources/static/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security4_Book_User/src/main/resources/templates/bookcard.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security4_Book_User/src/main/resources/templates/error/401.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security4_Book_User/src/main/resources/templates/error/403.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security4_Book_User/src/main/resources/templates/error/404.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security4_Book_User/src/main/resources/templates/error/405.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security4_Book_User/src/main/resources/templates/error/500.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security4_Book_User/src/main/resources/templates/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security4_Book_User/src/main/resources/templates/insertbook.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security4_Book_User/src/main/resources/templates/listbook.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security4_Book_User/src/test/java/com/example/security4_book_user/Security4BookUserApplicationTests.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2LleSdqzn8Z3za3pnLFPNcM8OP3" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/akio/Documents/hoc tap/java14-techmaster/translate for generator/project/ElephantDictionary/ElephantDictionary",
+    "spring.configuration.checksum": "3225eb84fe57959c7c4e196f375952a1"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="Assignment01DateApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="Assignment01Date" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.assignment01date.Assignment01DateApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6fbcaa80-cd74-459c-adc3-6519c07fef74" name="Changes" comment="" />
+      <created>1676450097376</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1676450097376</updated>
+      <workItem from="1676450098764" duration="1353000" />
+      <workItem from="1676460395767" duration="923000" />
+      <workItem from="1677214703362" duration="7000" />
+      <workItem from="1679646421867" duration="7639000" />
+    </task>
+    <task id="LOCAL-00001" summary="update bai 1">
+      <created>1679652316297</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1679652316297</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update bai 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="update bai 1" />
+  </component>
+</project>
