@@ -20,8 +20,8 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 @Configuration
-@EnableWebSecurity
-//@EnableGlobalAuthentication
+//@EnableWebSecurity
+@EnableGlobalAuthentication
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     UserDetailsServiceImpl userDetailsService;
@@ -91,7 +91,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
                 .authorizeRequests().antMatchers("/api/auth/**", "/signup", "/login","/home").permitAll()
 //                .antMatchers("/home").hasAnyRole("ROLE_ADMIN","ROLE_USER","ROLE_MEMBER")
-                .antMatchers("/api/test/user").hasRole("Role_USER")
+//                .antMatchers("/api/test/user").hasRole("Role_USER")
                 .anyRequest().authenticated();
 
         http.authenticationProvider(authenticationProvider());
