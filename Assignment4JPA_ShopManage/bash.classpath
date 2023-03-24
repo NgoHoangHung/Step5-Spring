@@ -1,1 +1,0 @@
-keytool -genkeypair -alias mycert -keyalg RSA -keystore keystore.jks
